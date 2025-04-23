@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import drawSargeantSellSheet from '../assets/drawSargeantSellSheet.svg';
-import trashTakesSellSheet from '../assets/trashTakesSellSheet.svg';
+import trashTakesSellSheet from '../assets/trashTakesSellSheet.png';
 import elderSellSheet from '../assets/elderSellSheet.svg';
 import frankSellSheet from '../assets/frankSellSheet.png';
 import dogSellSheet from '../assets/dogSellSheet.svg';
