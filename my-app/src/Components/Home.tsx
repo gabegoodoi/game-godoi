@@ -1,3 +1,7 @@
+import About from './About';
+import Resources from './Resources';
+import Unsigned from './Unsigned';
+
 function Home() {
   return (
     <div className="w-full min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
@@ -12,6 +16,9 @@ function Home() {
           </p>
         </p>
       </div>
+      <About />
+      <Unsigned />
+      <Resources />
     </div>
   );
 }

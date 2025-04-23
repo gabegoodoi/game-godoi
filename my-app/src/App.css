@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 a {
-  @apply text-blue-500 no-underline visited:text-blue-500 hover:text-teal-400 active:text-yellow-800 focus:text-yellow-300;
+  @apply text-blue-500 no-underline visited:text-blue-500 hover:text-teal-400 active:text-yellow-800;
   transition: color 0.3s ease-in-out;
 }
 
@@ -11,6 +11,9 @@ body {
   background: linear-gradient(to bottom, #1f0b06, #120603);
 }
 
+.rot-star-flipped {
+  transform: scaleX(-1);
+}
 
 
 @custom-variant dark (&:is(.dark *));

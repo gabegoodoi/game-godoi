@@ -4,9 +4,8 @@ import RotStar from '../assets/RotStar.gif';
 function About() {
   return (
     <div className="w-full min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
-      <h1 className="text-6xl font-bold pb-4 text-yellow-400">About Me</h1>
       <div className="text-left">
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-5xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4" />
             My Story
