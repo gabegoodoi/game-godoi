@@ -15,6 +15,7 @@ import keepScrolling from '../assets/keepScrolling.svg';
 
 function Unsigned() {
   const [openModal, setOpenModal] = useState<string | null>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleModalOpen = (modalId: string) => {
     setOpenModal(modalId);
@@ -22,6 +23,10 @@ function Unsigned() {
 
   const handleModalClose = () => {
     setOpenModal(null);
+  };
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -34,43 +39,94 @@ function Unsigned() {
       <h1 className="text-6xl font-bold pb-4 text-yellow-400">Unsigned Games</h1>
 
       <div>
-        <nav className=" p-4 rounded-lg shadow-lg">
+        {/* Dropdown for mobile */}
+        <div className="block md:hidden bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5">
+          <button
+            onClick={handleDropdownToggle}
+            className="w-full p-4 text-2xl font-semibold text-yellow-300 rounded-lg shadow-lg"
+          >
+            {isDropdownOpen ? 'Close Menu' : 'Open Menu'}
+          </button>
+          {isDropdownOpen && (
+            <ul className="mt-2 rounded-lg shadow-lg text-yellow-300">
+              <li className="p-2">
+                <a href="#sarge" className="block !text-teal-400 hover:!text-teal-400/70">Draw Sergeant</a>
+              </li>
+              <li className="p-2">
+                <a href="#takes" className="block !text-teal-400 hover:!text-teal-400/70">Trash Takes</a>
+              </li>
+              <li className="p-2">
+                <a href="#elder" className="block !text-teal-400 hover:!text-teal-400/70">Elder</a>
+              </li>
+              <li className="p-2">
+                <a href="#frank" className="block !text-teal-400 hover:!text-teal-400/70">Let's Be Frank</a>
+              </li>
+              <li className="p-2">
+                <a href="#dog" className="block !text-teal-400 hover:!text-teal-400/70">Dog Means Square</a>
+              </li>
+              <li className="p-2">
+                <a href="#disasterpieces" className="block !text-teal-400 hover:!text-teal-400/70">Disasterpieces</a>
+              </li>
+              <li className="p-2">
+                <a href="#dishes" className="block !text-teal-400 hover:!text-teal-400/70">Mrs. Witch's Sizzlin' Dishes</a>
+              </li>
+              <li className="p-2">
+                <a href="#tea" className="block !text-teal-400 hover:!text-teal-400/70">What's The Tea?</a>
+              </li>
+              <li className="p-2">
+                <a href="#crocodile" className="block !text-teal-400 hover:!text-teal-400/70">Crocodile Tiers</a>
+              </li>
+              <li className="p-2">
+                <a href="#puppetiers" className="block !text-teal-400 hover:!text-teal-400/70">Puppetiers</a>
+              </li>
+              <li className="p-2">
+                <a href="#bricks" className="block !text-teal-400 hover:!text-teal-400/70">Bricks & Tricks</a>
+              </li>
+              <li className="p-2">
+                <a href="#pondcala" className="block !text-teal-400 hover:!text-teal-400/70">Pondcala</a>
+              </li>
+            </ul>
+          )}
+        </div>
+
+        {/* Horizontal nav for larger screens */}
+        <nav className="hidden md:block p-4 rounded-lg shadow-lg">
           <ul className="flex flex-wrap justify-center gap-5 text-2xl font-semibold text-yellow-300">
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#sarge" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Draw Sergeant</a>
+            <li>
+              <a href="#sarge" className="hover:text-teal-400">Draw Sergeant</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#takes" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Trash Takes</a>
+            <li>
+              <a href="#takes" className="hover:text-teal-400">Trash Takes</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#elder" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Elder</a>
+            <li>
+              <a href="#elder" className="hover:text-teal-400">Elder</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#frank" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Let's Be Frank</a>
+            <li>
+              <a href="#frank" className="hover:text-teal-400">Let's Be Frank</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#dog" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Dog Means Square</a>
+            <li>
+              <a href="#dog" className="hover:text-teal-400">Dog Means Square</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#disasterpieces" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Disasterpieces</a>
+            <li>
+              <a href="#disasterpieces" className="hover:text-teal-400">Disasterpieces</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#dishes" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Mrs. Witch's Sizzlin' Dishes</a>
+            <li>
+              <a href="#dishes" className="hover:text-teal-400">Mrs. Witch's Sizzlin' Dishes</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#tea" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">What's The Tea?</a>
+            <li>
+              <a href="#tea" className="hover:text-teal-400">What's The Tea?</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#crocodile" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Crocodile Tiers</a>
+            <li>
+              <a href="#crocodile" className="hover:text-teal-400">Crocodile Tiers</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#puppetiers" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Puppetiers</a>
+            <li>
+              <a href="#puppetiers" className="hover:text-teal-400">Puppetiers</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#bricks" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Bricks & Tricks</a>
+            <li>
+              <a href="#bricks" className="hover:text-teal-400">Bricks & Tricks</a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#pondcala" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Pondcala</a>
+            <li>
+              <a href="#pondcala" className="hover:text-teal-400">Pondcala</a>
             </li>
           </ul>
         </nav>
@@ -101,7 +157,7 @@ function Unsigned() {
             Draw Sergeant
           </div>
         </h2>
-        <div className="mt-4 p-6 rounded-lg shadow-lg flex flex-wrap gap-4" >
+        <div className="mt-4 p-6 rounded-lg shadow-lg grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Text Column */}
           <div className="flex-1 text-lg text-pink-400">
             <ul className="divide-white text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
@@ -121,21 +177,21 @@ function Unsigned() {
           </div>
 
           {/* Image Column */}
-          <div className="flex-1 flex justify-center">
+          <div className="flex justify-center">
             <img
               src={drawSargeantSellSheet}
               alt="Draw Sergeant Sell Sheet"
-              className="h-[50vh] w-auto rounded-lg shadow-lg cursor-pointer"
+              className="h-auto w-full max-w-[300px] rounded-lg shadow-lg cursor-pointer"
               loading="lazy"
               onClick={() => handleModalOpen('drawSargeant')}
             />
           </div>
 
           {/* Video Column */}
-          <div className="flex-1 flex justify-center">
+          <div className="flex justify-center">
             <iframe
               width="100%"
-              height="315"
+              height="200"
               src="https://www.youtube.com/embed/T1DQNrswnVs"
               title="Draw Sergeant Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

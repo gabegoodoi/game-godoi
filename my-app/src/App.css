@@ -196,3 +196,10 @@ body {
 .navigation-menu-trigger:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+/* Hide RotStar images on mobile */
+@media (max-width: 768px) {
+  .rotstar {
+    display: none;
+  }
+}
