@@ -237,7 +237,7 @@ function Resources() {
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
                 onClick={() => window.open("https://podcasts.apple.com/us/podcast/five-games-for-doomsday/id1347283065", "_blank")}
             >
-                <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Five Games For Doomsday</span> - A podcast by where designers and games industry folks are interviewed and talk about meaningful games.
+                <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Five Games For Doomsday</span> - A podcast where designers and games industry folks are interviewed and talk about personally meaningful games.
             </li>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
