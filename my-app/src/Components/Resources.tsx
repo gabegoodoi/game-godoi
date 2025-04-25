@@ -265,7 +265,7 @@ function Resources() {
             onClick={() => window.open("https://locations.michaels.com/", "_blank")}
 
           >
-            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Michaels</span> - A craft store that has a wide range of materials for prototyping, honestly I get inspired seeing all the potential components and remembering that games are a tactile medium.
+            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Michaels</span> - A craft store that has a wide range of materials for prototyping; honestly I get inspired seeing all the potential components and remembering that games are a tactile medium.
           </li>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
