@@ -7,6 +7,7 @@ import Resources from './Components/Resources';
 import UnderConstruction from './Components/UnderConstruction';
 import Unsigned from './Components/Unsigned';
 import gabelogo from './assets/gabelogo.svg';
+import Contact from './Components/Contact';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,17 +38,20 @@ function App() {
               ></path>
             </svg>
           </button>
-          <div className="hidden sm:flex gap-6">
-            <Link to="/about" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
-              About
-            </Link>
-            <Link to="/unsigned" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
-              Unsigned Games
-            </Link>
-            <Link to="/resources" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
-              Designer Resources
-            </Link>
-          </div>
+          <div className="hidden sm:flex gap-6 pr-4">
+  <Link to="/about" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
+    About
+  </Link>
+  <Link to="/unsigned" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
+    Unsigned Games
+  </Link>
+  <Link to="/resources" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
+    Designer Resources
+  </Link>
+  <Link to="/contact" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
+    Contact
+  </Link>
+</div>
         </div>
         {menuOpen && (
           <div className="flex flex-col mt-4 gap-4 sm:hidden z-50 bg-[#0a0503] p-4 rounded-md shadow-lg">
@@ -60,6 +64,9 @@ function App() {
             <Link to="/resources" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
               Designer Resources
             </Link>
+            <Link to="/contact" className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors">
+              Contact
+            </Link>
           </div>
         )}
       </nav>
@@ -70,6 +77,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/unsigned" element={<Unsigned />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<UnderConstruction />} />
         </Routes>
       </div>

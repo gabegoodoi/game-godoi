@@ -11,7 +11,7 @@ function About() {
             My Story
           </div>
         </h2>
-        <p>
+        <div>
           <p
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
@@ -21,7 +21,7 @@ function About() {
             <br></br>
             I have a background in producing documentaries (having produced two Academy Award-winning short documentaries; <a href="https://www.youtube.com/watch?v=vPFkcoTfr7g">The Queen of Basketball</a> and <a href="https://www.youtube.com/watch?v=xttrkgKXtZ4">The Last Repair Shop</a>). I love to combine my technical skills with my creative problem-solving to bring projects to life.
           </p>
-        </p>
+        </div>
       </div>
 
       <div className="text-left">
@@ -31,14 +31,14 @@ function About() {
             Freelance Producer & Project Manager for 3 years
           </div>
         </h3>
-        <p>
+        <div>
           <p
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
           >
             After my time at Breakwater Studios, I transitioned into freelance producing, line-producing, and project management, where I had the opportunity to work with a diverse range of clients and projects, including this recent Emmy-winning Tribeca-selected short film <a href="https://www.imdb.com/title/tt34219099/">The Hicks Happy Hour</a>.
           </p>
-        </p>
+        </div>
       </div>
 
       <div className="text-left">
@@ -48,7 +48,7 @@ function About() {
             Worked @ Breakwater Studios for 5 years
           </div>
         </h3>
-        <p>
+        <div>
           <p
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
@@ -57,7 +57,7 @@ function About() {
 
             One of my proudest achievements was being part of the team that brought forth this <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a>, highlighting the COVAX initiative and the 75 year history of UNICEF amid the COIV-19 crisis. It was a humbling experience to contribute to a project that aimed to make a positive impact on global health and well-being. <a href="https://help.unicef.org/">Never a bad time to contribute to a good cause</a>!
           </p>
-        </p>
+        </div>
       </div>
 
       <div className="text-left">
