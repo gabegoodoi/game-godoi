@@ -391,7 +391,7 @@ function Unsigned() {
                 fontSize: isMobile ? '.6em' : '1.4rem', // Adjusts the text size to be smaller
               }}
             >
-              (co-design with Zu Quirke,{' '}
+              (co-design with Zu Quirke,{' & '}
               <a
                 href="https://www.sabrinabrennancomedy.com/"
                 target="_blank"
@@ -399,7 +399,6 @@ function Unsigned() {
               >
                 Sabrina Brennan
               </a>
-              , & Mitchell Winkie)
             </span>
         </h2>
         <div

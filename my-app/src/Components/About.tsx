@@ -29,24 +29,7 @@ function About() {
         </div>
       </div>
 
-      <div className="text-left">
-        <h3 className="text-2xl font-bold pt-4 text-yellow-300">
-          <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" style={{ transform: 'scaleX(-1)' }} />
-            Freelance Producer & Project Manager for 3 years
-          </div>
-        </h3>
-        <div>
-          <p
-            style={{ fontFamily: "'League Spartan', sans-serif" }}
-            className="text-2xl pt-4 text-yellow-250"
-          >
-            After five years at Breakwater Studios, I moved into freelance producing and project management. 
-  I’ve collaborated with a range of clients across film and digital media, including the recent Emmy-winning, 
-  Tribeca-selected short film <a href="https://www.imdb.com/title/tt34219099/">The Hicks Happy Hour</a>.
-          </p>
-        </div>
-      </div>
+      
 
       <div className="text-left">
         <h3 className="text-2xl font-bold pt-4 text-yellow-300">
@@ -66,6 +49,26 @@ function About() {
   One highlight was our <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a> on the COVAX initiative, celebrating 75 years of UNICEF’s global impact during the COVID-19 crisis. 
   It was an honor to help tell such an important story. 
   (<a href="https://help.unicef.org/">Support UNICEF</a> if you can — always a good cause.)
+          </p>
+        </div>
+      </div>
+
+
+      <div className="text-left">
+        <h3 className="text-2xl font-bold pt-4 text-yellow-300">
+          <div className="flex items-center justify-start">
+            <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" style={{ transform: 'scaleX(-1)' }} />
+            Freelance Producer & Project Manager for 3 years
+          </div>
+        </h3>
+        <div>
+          <p
+            style={{ fontFamily: "'League Spartan', sans-serif" }}
+            className="text-2xl pt-4 text-yellow-250"
+          >
+            After five years at Breakwater Studios, I moved into freelance producing and project management. 
+  I’ve collaborated with a range of clients across film and digital media, including the recent Emmy-winning, 
+  Tribeca-selected short film <a href="https://www.imdb.com/title/tt34219099/">The Hicks Happy Hour</a>.
           </p>
         </div>
       </div>
