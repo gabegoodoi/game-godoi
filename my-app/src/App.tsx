@@ -109,7 +109,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/unsigned" element={<Unsigned />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<UnderConstruction />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </div>

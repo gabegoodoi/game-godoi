@@ -115,7 +115,7 @@ function Resources() {
           </div>
         </h2>
         <p className="text-2xl text-left" style={{ fontFamily: "'League Spartan', sans-serif" }}>
-          If you want to design games, you should try! Game design can feel overwhelming at first, but there are countless resources that helped and continuee to help me along the way. Below are some of the tools and sites I find useful.
+          If you want to design games, you should try! Game design can feel overwhelming at first, but there are countless resources that helped and continue to help me along the way. Below are some of the tools and sites I find useful.
         </p>
       </div>
 
