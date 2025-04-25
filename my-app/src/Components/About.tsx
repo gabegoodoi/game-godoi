@@ -1,6 +1,6 @@
 // About.tsx
 import RotStar from '../assets/RotStar.gif';
-import circle from '../assets/circle.png';
+import profile from '../assets/profile.png';
 
 function About() {
   return (
@@ -8,7 +8,7 @@ function About() {
       <div className="text-left">
         <h2 className="text-5xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={circle} alt="Gabe pic" className="w-24 h-24 mr-4 rotstar" />
+            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4 rotstar" />
             My Story
           </div>
         </h2>
