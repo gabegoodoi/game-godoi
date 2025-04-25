@@ -573,7 +573,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                If you want to get your game in front of publishers, conventions are a great way to do it. There are a lot of conventions out there, but there are a couple of important ones in the US worth mentioning. I should say, I've been told to try out NY Toy Fair, Chicago Toy Fair, but I have yet to attend.
+                If you want to get your game in front of publishers, conventions are a great way to do it. There are a lot of conventions out there, but there are a couple of important ones in the US worth mentioning. I should say, in addition to these I've been told to try out NY Toy Fair & Chicago Toy Fair, but I have yet to attend.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
