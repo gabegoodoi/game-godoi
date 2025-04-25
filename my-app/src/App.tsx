@@ -4,7 +4,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Resources from './Components/Resources';
-import UnderConstruction from './Components/UnderConstruction';
 import Unsigned from './Components/Unsigned';
 import gabelogo from './assets/gabelogo.svg';
 import Contact from './Components/Contact';
