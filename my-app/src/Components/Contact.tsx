@@ -1,7 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation for route detection
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+    const [notification, setNotification] = useState<{ message: string; type: "success" | "error" } | null>(null);
+    const location = useLocation(); // Get the current route location
+
     useEffect(() => {
         const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
         if (!publicKey) {
@@ -10,6 +14,11 @@ function Contact() {
         }
         emailjs.init(publicKey);
     }, []);
+
+    // Clear notification on route change
+    useEffect(() => {
+        setNotification(null);
+    }, [location]);
 
     const form = useRef<HTMLFormElement>(null);
 
@@ -21,7 +30,7 @@ function Contact() {
 
         if (!serviceID || !templateID) {
             console.error("Service ID or Template ID is missing.");
-            alert("Email configuration is incomplete.");
+            setNotification({ message: "Email configuration is incomplete.", type: "error" });
             return;
         }
 
@@ -30,14 +39,11 @@ function Contact() {
                 .then(
                     (result) => {
                         console.log("Email sent successfully:", result.text);
-                        alert("Message sent successfully!");
+                        setNotification({ message: "Message sent successfully!", type: "success" });
                     },
                     (error) => {
                         console.error("Error sending email:", error);
-                        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
-                        console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-                        console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-                        alert("Failed to send message. Please try again.");
+                        setNotification({ message: "Failed to send message. Please try again.", type: "error" });
                     }
                 );
         }
@@ -50,11 +56,30 @@ function Contact() {
                     Contact Me
                 </h2>
                 <p
-                    className="text-2xl text-left text-pink-400"
+                    className="mb-6 text-2xl text-left text-pink-400"
                     style={{ fontFamily: "'League Spartan', sans-serif" }}
                 >
                     If you have any questions or if you want to get in touch, please feel free to reach out. I would love to hear from you!
                 </p>
+                {notification && (
+                    <div
+                        style={{ fontFamily: "'League Spartan', sans-serif" }}
+                        className={`p-4 mb-6 text-md rounded-lg mt-6 flex justify-between items-center ${
+                            notification.type === "success"
+                                ? "bg-green-100 text-green-700"
+                                : "bg-red-100 text-red-700"
+                        }`}
+                        role="alert"
+                    >
+                        <span>{notification.message}</span>
+                        <button
+                            onClick={() => setNotification(null)}
+                            className="ml-4 text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none"
+                        >
+                            ✕
+                        </button>
+                    </div>
+                )}
                 <form ref={form} onSubmit={sendEmail} className="space-y-8" style={{ fontFamily: "'League Spartan', sans-serif" }}>
                     <div>
                         <label
