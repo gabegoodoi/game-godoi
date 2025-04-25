@@ -717,115 +717,6 @@ function Unsigned() {
       )}
 
 <div
-        id="disasterpieces"
-        className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
-        style={{
-          scrollMarginTop: '100px',
-          marginBottom: '5vw',
-        }}
-      >
-        <h2
-          className="text-4xl font-bold text-amber-300 text-center pb-3"
-          style={{
-            borderRadius: '10px 10px 0 0',
-          }}
-        >
-          <div className="flex items-center justify-center">Disasterpieces</div>
-        </h2>
-        <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
-            gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
-          }}
-        >
-          {/* Text Column */}
-          <div
-            className="pl-5 pr-5 flex-1 text-center md:text-left lg:text-left xl:text-left items-start text-2xl text-pink-400 font-semibold divide-white sm:text-[1.75rem] md:text-[1.5rem] lg:text-4xl text-pink-200"
-            style={{
-              fontFamily: "'League Spartan', sans-serif",
-              gridArea: 'text',
-            }}
-          >
-             A cooperative party game where bad art makes great memories. Can you work as a team to give piece by piece instructions to your artist.
-            </div>
-
-          {/* Image Column */}
-          <div
-            className="flex items-start justify-center"
-            style={{
-              gridArea: 'image',
-            }}
-          >
-            <img
-              src={keepScrolling}
-              alt="Disasterpieces sell sheet"
-              className="h-auto w-full max-w-[300px] rounded-lg shadow-lg cursor-pointer"
-              onClick={() => handleModalOpen('disasterpieces')}
-            />
-          </div>
-
-          {/* List Column */}
-          <div
-            className="text-center md:text-left divide-white sm:text-center text-[1.3rem] sm:text-[1.6rem] md:text-[1.56rem] lg:text-[1.75rem] text-pink-200"
-            style={{
-              fontFamily: "'League Spartan', sans-serif",
-              gridArea: 'list',
-            }}
-          >
-            <ul>
-            <li className="pt-4">
-                <span
-                  className="font-bold text-pink-300"
-                  style={{ transition: 'color 0.3s ease-in-out' }}
-                >
-                  Player Count:
-                </span>{' '}
-                2-10
-              </li>
-              <li className="pt-4">
-                <span
-                  className="font-bold text-pink-300"
-                  style={{ transition: 'color 0.3s ease-in-out' }}
-                >
-                  Age Range:
-                </span>{' '}
-                8+
-              </li>
-              <li className="pt-4">
-                <span
-                  className="font-bold text-pink-300"
-                  style={{ transition: 'color 0.3s ease-in-out' }}
-                >
-                  Duration:
-                </span>{' '}
-                20 minutes
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Modal for Disasterpieces */}
-      {openModal === 'disasterpieces' && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={handleModalClose}
-        >
-          <img
-            src={keepScrolling}
-            alt="Disasterpieces Sell Sheet Fullscreen"
-            className="max-h-full max-w-full rounded-lg shadow-lg"
-          />
-        </div>
-      )}
-
-
-
-
-
-
-
-<div
         id="dishes"
         className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
         style={{
@@ -954,9 +845,6 @@ function Unsigned() {
           />
         </div>
       )}
-
-
-
 <div
         id="tea"
         className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
@@ -1087,9 +975,6 @@ function Unsigned() {
           />
         </div>
       )}
-
-
-
 <div
         id="disasterpieces"
         className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
@@ -1295,18 +1180,6 @@ function Unsigned() {
           />
         </div>
       )}
-
-
-
-
-
-
-
-
-
-
-
-
 <div
         id="puppetiers"
         className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
@@ -1410,13 +1283,6 @@ function Unsigned() {
           />
         </div>
       )}
-
-
-
-
-
-
-
 <div
         id="bricks"
         className="text-left rounded-lg shadow-lg mt-5 pb-5 pt-5"
