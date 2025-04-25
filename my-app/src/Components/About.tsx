@@ -63,8 +63,7 @@ function About() {
             I got my start at Breakwater Studios, where I wore many hats — producing, coordinating, and managing 
   award-winning documentary and commercial projects.
   <br /><br />
-  One highlight was our <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a> 
-  on the COVAX initiative, celebrating 75 years of UNICEF’s global impact during the COVID-19 crisis. 
+  One highlight was our <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a> on the COVAX initiative, celebrating 75 years of UNICEF’s global impact during the COVID-19 crisis. 
   It was an honor to help tell such an important story. 
   (<a href="https://help.unicef.org/">Support UNICEF</a> if you can — always a good cause.)
           </p>
