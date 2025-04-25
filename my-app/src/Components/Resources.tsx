@@ -115,7 +115,7 @@ function Resources() {
           </div>
         </h2>
         <p className="text-2xl text-left" style={{ fontFamily: "'League Spartan', sans-serif" }}>
-          If you want to design games, you should try! If you're just getting started and don't know what to do there are a lot of great resources out there. Below are some that helped me.
+          If you want to design games, you should try! Game design can feel overwhelming at first, but there are countless resources that helped and continuee to help me along the way. Below are some of the tools and sites I find useful.
         </p>
       </div>
 
@@ -127,7 +127,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-            As a designer, playing lots of board games is super helpful. It teaches me new ideas, shows me what works and what doesn’t, and helps me grow my skills. I recommend checking out games at local board game cafes or stores—just dive into any rulebook you find. If that’s not possible, there are online ways to do it too.
+        I've heard some designers say that they only play their own games, but continuing to make the time to play new board games has been invaluable to me. It's one of the best ways to get exposed to different mechanics and design ideas. I recommend finding games to try, whether through local cafes, stores, or even online platforms when you can't get out.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li
@@ -186,7 +186,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-            I love reading about game design. Here are some of my favorite musings.
+        Reading about game design has been one of my favorite ways to reflect on my process. There are so many great articles and books out there that offer new perspectives and challenge the way I think about design.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
             <li
@@ -224,7 +224,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-            I've learned a lot just from throwing on a podcast on a commute or while I do the dishes. Here are some of my favorites.
+        Podcasts are a great way for me to keep learning while doing other things. They let me hear from experienced designers and catch little insights that shape how I approach my own projects.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
             <li
@@ -235,9 +235,9 @@ function Resources() {
             </li>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
-                onClick={() => window.open("https://podcasts.apple.com/us/podcast/magic-the-gathering-drive-to-work-podcast/id580709168", "_blank")}
+                onClick={() => window.open("https://podcasts.apple.com/us/podcast/five-games-for-doomsday/id1347283065", "_blank")}
             >
-                <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Drive To Work</span> - A podcast by game designer Mark Rosewater, who has been designing Magic: The Gathering for over 20 years. He shares his insights and experiences in the industry.
+                <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Five Games For Doomsday</span> - A podcast by where designers and games industry folks are interviewed and talk about meaningful games.
             </li>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
@@ -257,7 +257,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-           The most fun way to get those components you're looking to build your prototype out of is a good old fashioned trip to Good Will or a local thrift store. Second-hand board games are often extremely cheap and can be pilfered for their components. THat being said, some of my key direct suppliers might seem pretty straightforward but worth mentioning.
+        Thrift stores have been a goldmine for me when sourcing components for prototypes. Secondhand games are cheap and provide tons of useful pieces. It’s an easy way to get started with prototyping without breaking the bank. THat being said, some of my sources for key supplies might seem pretty straightforward but worth mentioning.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li
@@ -296,7 +296,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-            Graphic design and layout time. Get that prototype to the table as quickly as possible with these tools.
+        Getting a prototype on the table quickly is key, and graphic design tools have made that process so much easier. These resources help me turn rough ideas into something tangible that I can test and refine.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li
@@ -329,7 +329,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                In order to make a game, you'll want to have documents for rules, components, and other things. Here are some templates.
+            When I’m working on rules or component docs, templates save me a lot of time. They help me stay organized and get my thoughts down more clearly, which is crucial when you’re iterating on a game.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -380,6 +380,14 @@ function Resources() {
               Template Design Tracking Sheet
             </span> -  Once you have many designs up and running simultaneously it's useful to have a way to track the status of each and where all of their other documentation is stored. I use something like this to keep track of my designs and ideas.
           </li>
+          <li 
+            className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
+            onClick={() => window.open("https://www.drandagames.co.uk/post/sell-sheets-for-board-games", "_blank")}
+          >
+            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>
+              Sell Sheets
+            </span> -  When getting ready to pitch a game to publishers, you need a sell sheet. But what the heck is a sell sheet? This will clarify.
+          </li>
         </ul>
       </div> 
 
@@ -392,7 +400,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                Playtesting is a crucial part of the game design process. It allows you to see how your game works in practice and identify areas for improvement. There are a lot of ways to structure playtests, but I have found that the best way is to have a clear goal for each playtest and to be open to feedback. Here are some guides that I have found helpful:
+            Playtesting is an ongoing part of my process. Every test gives me new insights into how my game functions in practice. I always try to have a clear goal for each test, and being open to feedback has made a huge difference.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -423,7 +431,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                The conventional wisdom is to playtest your prototypes as early as possible and as often as possible. I'm based in Los Angeles so I attend our local designer events at <a href="https://www.meetup.com/first-to-play-los-angeles-board-game-playtesters/" target="_blank" rel="noopener noreferrer" >First Play LA</a>. Beyond that, finding or building groups of folks who are willing to regularly play unfinished, rough, or sometimes untested designs is part of the process and has proven incredibly valuable to the iteration of my games and growth as a designer.
+            For me, attending local playtesting events like <a href="https://www.meetup.com/first-to-play-los-angeles-board-game-playtesters/" target="_blank" rel="noopener noreferrer">First Play LA</a> has been invaluable. Getting real-time feedback from other designers and playtesters is crucial for improving and iterating on designs.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -455,7 +463,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                Connecting with other designers and learning about what problems they're looking to solve daily is a fast-track to understanding the process. Here in LA I like the <a href="https://discord.gg/n8k2n5qH" target="_blank" rel="noopener noreferrer">LA Playtest Exchange Discord group</a>.
+            Connecting with other designers has accelerated my learning. Whether through in-person events or online communities, it’s been a game-changer to talk shop and swap ideas. I recommend checking out the <a href="https://discord.gg/n8k2n5qH" target="_blank" rel="noopener noreferrer">LA Playtest Exchange Discord</a> if you’re in LA.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
             <li 
@@ -505,7 +513,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                If you want to send your game to far-off playtesters, publishers or maybe just many people at one time, you may want to make it digital. There are a lot of ways to do this  <a href="https://cardboardedison.com/virtual-tabletops" target="_blank" rel="noopener noreferrer">(see Cardboard Edison's list here )</a>, but for me there's only been two I use regularly.
+            For digital playtesting or to send your game to remote testers, platforms like <a href="https://cardboardedison.com/virtual-tabletops" target="_blank" rel="noopener noreferrer">Cardboard Edison</a> provide solid options. These platforms help you expand your reach without being in the same room as your testers.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -565,7 +573,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                If you want to get your game in front of publishers, conventions are a great way to do it. There are a lot of conventions out there, but There's a couple of important ones in the US worth mentioning.
+                If you want to get your game in front of publishers, conventions are a great way to do it. There are a lot of conventions out there, but There's a couple of important ones in the US worth mentioning. I should say, I've been told to try out NY Toy Fair, Chicago Toy Fair, but I have yet to attend.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -619,7 +627,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-                If the goal is to get the game on shelves and in the hands of players, finding a publisher is the next step. From cold emailing to finding connections through a friend of a friend to randomly bumping into inventor relations folks at conventions - there's a lot of ways you could meet the right person to pitch your game, but a good starting place was through these heavy-duty directories.
+            These directories have been helpful for me in getting my foot in the door and understanding who to reach out  when I'm ready to pitch a game.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
@@ -650,7 +658,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-            Thanks for reading! I must admit this whole great big scroll you find yourself nearing the end of has not been comprehensive rather personal. Others in the community have put in a lot of work to centralize information though, so if you want more than I can offer, I would love to point you in the direction of some of the best resources out there.
+        Thanks for checking out my list! This is just a snapshot of the resources I’ve used on my own journey. There are many more out there, and I’d be happy to point you in the right direction if you’re looking for even more.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li

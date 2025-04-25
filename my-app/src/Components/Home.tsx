@@ -11,9 +11,10 @@ function Home() {
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
           >
-            Hi, I'm Gabe Godoi and this is my board game website. I design games and this is a space I want to share some of my designs, thoughts, and updates with you.
+            This site showcases my collection of unsigned games designs and serves as a resource hub for new designers, 
+            offering tools, links, and personal insights that I wish I had when starting out.
           </p>
-      </div>
+        </div>
       <About />
       <Unsigned />
       <Resources />
