@@ -1,66 +1,116 @@
+import { useState } from 'react';
 import RotStar from '../assets/RotStar.gif';
 
 function Resources() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <h1 className="text-6xl font-bold pb-4 text-yellow-400">Resources</h1>
 
-      <div>
-        <nav className=" p-4 rounded-lg shadow-lg">
-          <ul className="flex flex-wrap justify-center gap-5 text-2xl font-semibold text-yellow-300">
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#learning-games" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Playing</a>
+      {/* Dropdown menu */}
+      <div
+        className="bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5 pb-3"
+        style={{
+          fontFamily: "'League Spartan', sans-serif",
+        }}
+      >
+        <button
+          onClick={handleDropdownToggle}
+          className="w-full pt-4 text-2xl font-semibold text-pink-300 rounded-lg shadow-lg"
+        >
+          {isDropdownOpen ? 'Close Menu' : 'Open Menu'}
+        </button>
+        {isDropdownOpen && (
+          <ul className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
+            <li className="p-2">
+              <a href="#learning-games" className="block !text-teal-400 hover:!text-teal-400/70">
+                Playing
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#learning-jargon" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Terminology</a>
+            <li className="p-2">
+              <a href="#learning-jargon" className="block !text-teal-400 hover:!text-teal-400/70">
+                Terminology
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#looking-to-learn" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Podcasts</a>
+            <li className="p-2">
+              <a href="#looking-to_learn" className="block !text-teal-400 hover:!text-teal-400/70">
+                Podcasts
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#learning-by-listening" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Reading</a>
+            <li className="p-2">
+              <a href="#learning-by-listening" className="block !text-teal-400 hover:!text-teal-400/70">
+                Reading
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#gathering-components" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Components</a>
+            <li className="p-2">
+              <a href="#gathering-components" className="block !text-teal-400 hover:!text-teal-400/70">
+                Components
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#making-prototypes" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Prototyping</a>
+            <li className="p-2">
+              <a href="#making-prototypes" className="block !text-teal-400 hover:!text-teal-400/70">
+                Prototyping
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#documentation" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Documentation</a>
+            <li className="p-2">
+              <a href="#documentation" className="block !text-teal-400 hover:!text-teal-400/70">
+                Documentation
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#structuring-playtests" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Playtesting</a>
+            <li className="p-2">
+              <a href="#structuring-playtests" className="block !text-teal-400 hover:!text-teal-400/70">
+                Playtesting
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#finding-playtesters" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Playtesters</a>
+            <li className="p-2">
+              <a href="#finding-playtesters" className="block !text-teal-400 hover:!text-teal-400/70">
+                Playtesters
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#finding-communities" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Communities</a>
+            <li className="p-2">
+              <a href="#finding-communities" className="block !text-teal-400 hover:!text-teal-400/70">
+                Communities
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#digitizing" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Digitizing</a>
+            <li className="p-2">
+              <a href="#digitizing" className="block !text-teal-400 hover:!text-teal-400/70">
+                Digitizing
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#contests" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Contests</a>
+            <li className="p-2">
+              <a href="#contests" className="block !text-teal-400 hover:!text-teal-400/70">
+                Contests
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#conventions" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Conventions</a>
+            <li className="p-2">
+              <a href="#conventions" className="block !text-teal-400 hover:!text-teal-400/70">
+                Conventions
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#publishers" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">Publishers</a>
+            <li className="p-2">
+              <a href="#publishers" className="block !text-teal-400 hover:!text-teal-400/70">
+                Publishers
+              </a>
             </li>
-            <li className="flex-1 text-center md:flex-none">
-              <a href="#more" className="!text-teal-400 hover:!text-teal-600 !transition !duration-300">More</a>
+            <li className="p-2">
+              <a href="#more" className="block !text-teal-400 hover:!text-teal-400/70">
+                More
+              </a>
             </li>
           </ul>
-        </nav>
+        )}
       </div>
-      
+
+      {/* Content sections */}
       <div id="what-is-this-page" className="text-left">
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
             What is this page?
           </div>
         </h2>
@@ -72,7 +122,7 @@ function Resources() {
       <div id="learning-games" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Learning Games
           </div>
         </h2>
@@ -99,7 +149,7 @@ function Resources() {
       <div id="learning-jargon" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Learning Jargon
           </div>
         </h2>
@@ -131,7 +181,7 @@ function Resources() {
       <div id="looking-to-learn" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Looking to Learn
           </div>
         </h2>
@@ -169,7 +219,7 @@ function Resources() {
       <div id="learning-by-listening" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Learning by Listening
           </div>
         </h2>
@@ -202,7 +252,7 @@ function Resources() {
       <div id="gathering-components" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
           Gathering Components
           </div>
         </h2>
@@ -241,7 +291,7 @@ function Resources() {
       <div id="making-prototypes" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Making Prototypes
           </div>
         </h2>
@@ -274,7 +324,7 @@ function Resources() {
       <div id="documentation" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Making Documentation
             </div>
             </h2>
@@ -337,7 +387,7 @@ function Resources() {
       <div id="structuring-playtests" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4"/>
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
                 Structuring Playtests
             </div>
             </h2>
@@ -368,7 +418,7 @@ function Resources() {
         <div id="finding-playtesters" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Finding Playtesters
             </div>
             </h2>
@@ -400,7 +450,7 @@ function Resources() {
       <div id="finding-communities" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4"/>
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
                 Finding Communities
             </div>
             </h2>
@@ -450,7 +500,7 @@ function Resources() {
       <div id="digitizing" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Digitizing Your Prototype
             </div>
             </h2>
@@ -480,7 +530,7 @@ function Resources() {
       <div id="contests" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4" />
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
                 Making a Game of It
             </div>
             </h2>
@@ -510,7 +560,7 @@ function Resources() {
       <div id="conventions" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Going To Conventions
             </div>
             </h2>
@@ -564,7 +614,7 @@ function Resources() {
       <div id="publishers" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4" />
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
                 Finding Publishers
             </div>
             </h2>
@@ -595,7 +645,7 @@ function Resources() {
       <div id="more" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped" />
+          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
           Missing something?
           </div>
         </h2>
@@ -663,4 +713,5 @@ function Resources() {
     </div>
   );
 }
+
 export default Resources;
