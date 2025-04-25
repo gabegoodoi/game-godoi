@@ -627,7 +627,7 @@ function Resources() {
             </div>
             </h2>
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
-            These directories have been helpful for me in getting my foot in the door and understanding who to reach out  when I'm ready to pitch a game.
+            These directories have been helpful for me in getting my foot in the door and understanding who to reach out to when I'm ready to pitch a game.
             </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li 
