@@ -257,7 +257,7 @@ function Resources() {
           </div>
         </h2>
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
-        Thrift stores have been a goldmine for me when sourcing components for prototypes. Secondhand games are cheap and provide tons of useful pieces. It’s an easy way to get started with prototyping without breaking the bank. THat being said, some of my sources for key supplies might seem pretty straightforward but worth mentioning.
+        Thrift stores have been a goldmine for me when sourcing components for prototypes. Secondhand games are cheap and provide tons of useful pieces. It’s an easy way to get started with prototyping without breaking the bank. That being said, some of my sources for key supplies might seem pretty straightforward but worth mentioning.
         </p>
         <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
           <li
