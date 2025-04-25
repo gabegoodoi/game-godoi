@@ -271,7 +271,7 @@ function Resources() {
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.officedepot.com/storelocator/", "_blank")}
           >
-            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Office Depot</span> - has a wide range of materials useful for prototyping. Don't sleep on laminent and expo markers.
+            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Office Depot</span> - Has a wide range of materials useful for prototyping. Don't sleep on lamination and expo markers.
           </li>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
@@ -283,7 +283,7 @@ function Resources() {
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.diceemporium.com/product-category/6-sided-dice/?orderby=price&min_price=0&max_price=10", "_blank")}
           >
-            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Dice Emporium</span> - A great place to get dice for your prototypes. They have a wide range of colors and sizes.
+            <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>Dice Emporium</span> - An easy site to get dice for your prototypes. They have a wide range of colors and sizes.
           </li>
         </ul>
       </div>
@@ -378,7 +378,7 @@ function Resources() {
           >
             <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>
               Template Design Tracking Sheet
-            </span> -  Once you have many designs up and running simultaneously it's useful to have a way to track the status of each and where all of their other documentation is stored. I use something like this to keep track of my designs and ideas.
+            </span> -  Once you have many designs up and running simultaneously, it's useful to have a way to track the status of each and where all of their other documentation is stored. I use something like this to keep track of my designs and ideas.
           </li>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
@@ -386,7 +386,7 @@ function Resources() {
           >
             <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>
               Sell Sheets
-            </span> -  When getting ready to pitch a game to publishers, you need a sell sheet. But what the heck is a sell sheet? This will clarify.
+            </span> -  When getting ready to pitch a game to publishers, you need a sell sheet. But what the heck is a sell sheet anyway? This will clarify.
           </li>
         </ul>
       </div> 
@@ -450,7 +450,7 @@ function Resources() {
           >
             <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>
             Cardboard Edison - Calendar
-            </span> - Site with tons of useful tools for designers, including a calendar of ongoing digital playtesting events and local playtests by region.
+            </span> - Tracks ongoing digital playtesting events and local playtesting events by region.
           </li>
         </ul>
       </div>       
@@ -473,7 +473,7 @@ function Resources() {
           >
             <span className="text-blue-500 font-bold hover:text-teal-400" style={{ transition: 'color 0.3s ease-in-out' }}>
               Tabletop Game Designer Association - The TTGDA
-            </span> - A organization dedicated to supporting and promoting tabletop game designers. They offer resources and events. It is a paid membership, but worth it down the line - for instance they aided me in contract review as a member.
+            </span> - An organization dedicated to supporting and promoting tabletop game designers. They offer resources and events. It is a paid membership, but worth it down the line - for instance they aided me in contract review as a member.
           </li>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
