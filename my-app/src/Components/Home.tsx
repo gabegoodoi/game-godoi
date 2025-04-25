@@ -11,7 +11,7 @@ function Home() {
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
           >
-            This site showcases my collection of unsigned games designs and serves as a resource hub for new designers, 
+            This site showcases my collection of unsigned game designs and serves as a resource hub for new designers, 
             offering tools, links, and personal insights that I wish I had when starting out.
           </p>
         </div>
