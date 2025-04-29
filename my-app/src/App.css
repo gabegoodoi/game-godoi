@@ -2,13 +2,221 @@
 @import "tw-animate-css";
 
 a {
+  @apply text-blue-500 no-underline visited:text-blue-500 hover:text-pink-400 active:text-yellow-800;
+  transition: color 0.3s ease-in-out;
+}
+
+body.dark .transition-colors:hover  {
+  color: oklch(71.8% 0.202 349.761);
+}
+
+
+
+body {
+  @apply m-0 p-0;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+body.light {
+  background: linear-gradient(to top, #f5f5eb, #ffffff);
+}
+
+body.party {
+  background: linear-gradient(to bottom, #1f0b06, #120603); 
+  color: #fff; 
+}
+
+body.light .text-yellow-400 {
+  color: #6e2614;
+}
+
+
+
+body.dark #menu{
+  color: oklch(77.7% 0.152 181.912);
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.light #menu{
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.light #menu:hover{
+  color: oklch(71.8% 0.202 349.761)
+}
+
+#dropdown-menu {
+  background: rgba(165, 42, 42, 0.096);
+}
+
+body.dark #menu:hover{
+  color: oklch(71.8% 0.202 349.761)
+}
+
+body.party #menu{
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.party #menu:hover{
+  color: oklch(71.8% 0.202 349.761)
+}
+
+body.party #menu-selection a {
+  color: oklch(77.7% 0.152 181.912)
+}
+
+body.party #menu-selection a:hover {
+  color: yellow
+}
+
+
+body.party nav div a{
+  color: oklch(77.7% 0.152 181.912); 
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.light select {
+  color: oklch(62.3% 0.214 259.815); 
+  border: none;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.party select {
+  border: none;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.dark select:hover {
+  color: oklch(71.8% 0.202 349.761);
+}
+
+body.party select:hover {
+  color: oklch(71.8% 0.202 349.761);
+}
+
+body.light select:hover {
+  color: oklch(71.8% 0.202 349.761);
+}
+
+body.dark select {
+  color: oklch(62.3% 0.214 259.815);
+  border: none;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+body.party nav div a:hover{
+  color: oklch(71.8% 0.202 349.761); 
+}
+
+body.party #menu{
+  color: oklch(77.7% 0.152 181.912);
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body.dark #menu-selection a {
+  color: oklch(77.7% 0.152 181.912)
+}
+
+body.light #resource-blurbs li {
+  background: #fff0d6;
+  margin-bottom: 10px
+}
+
+body.dark #resource-blurbs li {
+  background: #021631;
+  border: 1px solid white;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-top: 1px solid white; /* Add a top border to all child elements except the first */
+  
+}
+
+body.dark #resource-blurbs li:hover {
+  background: #032e2b;
+
+}
+
+body.party #resource-blurbs li {
+  background: #021631;
+  border: 1px solid white;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-top: 1px solid white; /* Add a top border to all child elements except the first */
+  
+}
+
+body.party #resource-blurbs li:hover {
+  background: #032e2b;
+
+}
+
+body.dark #menu-selection a:hover {
+  color: oklch(71.8% 0.202 349.761) 
+}
+
+body.light h2 div{
+  color: #6e2614;
+}
+
+body.light h3{
+  color: #6e2614;
+}
+
+body.light .text-pink-200{
+  color: #6e2614;
+}
+
+body.light span{
+  color: #6e2614;
+}
+
+body.light .italic{
+  color: #6e2614;
+}
+
+body.light span .italic{
+  color: #6e2614;
+}
+
+body.light .text-pink-300{
+  color: #6e2614;
+}
+
+body.dark a {
   @apply text-blue-500 no-underline visited:text-blue-500 hover:text-teal-400 active:text-yellow-800;
   transition: color 0.3s ease-in-out;
 }
 
-body {
-  @apply m-0 p-0;
-  background: linear-gradient(to bottom, #1f0b06, #120603);
+body.dark * {
+  color: #fff0d6
+}
+
+
+body.dark #what-is-this-page-text{
+  color: #fff0d6
+}
+
+body.light #what-is-this-page-text{
+  color: #6e2614;
+}
+
+body.light .text-yellow-300 {
+  color: #6e2614;
+}
+
+body.light .text-pink-400{
+  color: #6e2614;
 }
 
 .rot-star-flipped {
@@ -171,6 +379,41 @@ body {
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
+.party {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
 
 @layer base {
   * {

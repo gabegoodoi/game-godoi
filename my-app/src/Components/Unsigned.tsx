@@ -43,17 +43,19 @@ function Unsigned() {
 
   return (
     <div
+      id="unsigned"
       className="min-h-screen pt-4 text-pink-400"
       style={{
         fontFamily: "'Dm Serif Display', serif",
       }}
     >
-      <h1 className="text-6xl font-bold pb-4 text-yellow-400">Unsigned Games</h1>
+      <h1 className="text-6xl font-bold pb-4 text-yellow-400">Available Games</h1>
 
       <div>
         <div id="what-is-this-page" className="text-left">
           <h2 className="text-3xl font-bold">
             <div
+              id="what-is-this-page-text"
               className="flex items-center justify-start mb-5 text-[#dea335]"
               style={{ fontFamily: "'League Spartan', sans-serif" }}
             >
@@ -64,76 +66,78 @@ function Unsigned() {
 
         {/* Dropdown menu as a button for all screen sizes */}
         <div
-          className="bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5 pb-3"
+          id="dropdown-menu"
+          className="bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5"
           style={{
             fontFamily: "'League Spartan', sans-serif",
           }}
         >
           <button
             onClick={handleDropdownToggle}
-            className="w-full pt-4 text-2xl font-semibold text-pink-300 rounded-lg shadow-lg"
+            id="menu"
+            className="w-full p-2 text-2xl font-semibold text-pink-300 rounded-lg shadow-lg"
           >
             {isDropdownOpen ? 'Close Menu' : 'Open Menu'}
           </button>
           {isDropdownOpen && (
-            <ul className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
+            <ul id="menu-selection" className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
               <li className="p-2">
-                <a href="#sarge" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#sarge" className="block">
                   Draw Sergeant
                 </a>
               </li>
               <li className="p-2">
-                <a href="#takes" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#takes" className="block">
                   Trash Takes
                 </a>
               </li>
               <li className="p-2">
-                <a href="#elder" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#elder" className="block">
                   Elder
                 </a>
               </li>
               <li className="p-2">
-                <a href="#frank" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#frank" className="block">
                   Let's Be Frank
                 </a>
               </li>
               <li className="p-2">
-                <a href="#dog" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#dog" className="block">
                   Dog Means Square
                 </a>
               </li>
               <li className="p-2">
-                <a href="#disasterpieces" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#disasterpieces" className="block">
                   Disasterpieces
                 </a>
               </li>
               <li className="p-2">
-                <a href="#dishes" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#dishes" className="block">
                   Mrs. Witch's Sizzlin' Dishes
                 </a>
               </li>
               <li className="p-2">
-                <a href="#tea" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#tea" className="block">
                   What's The Tea?
                 </a>
               </li>
               <li className="p-2">
-                <a href="#crocodile" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#crocodile" className="block">
                   Crocodile Tiers
                 </a>
               </li>
               <li className="p-2">
-                <a href="#puppetiers" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#puppetiers" className="block">
                   Puppetiers
                 </a>
               </li>
               <li className="p-2">
-                <a href="#bricks" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#bricks" className="block">
                   Bricks & Tricks
                 </a>
               </li>
               <li className="p-2">
-                <a href="#pondcala" className="block !text-teal-400 hover:!text-teal-400/70">
+                <a href="#pondcala" className="block">
                   Pondcala
                 </a>
               </li>
@@ -160,8 +164,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Draw Sergeant</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -281,8 +284,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Trash Takes</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -391,7 +393,7 @@ function Unsigned() {
                 fontSize: isMobile ? '.6em' : '1.4rem', // Adjusts the text size to be smaller
               }}
             >
-              (co-design with Zu Quirke,{' & '}
+              co-design with Zu Quirke,{' & '}
               <a
                 href="https://www.sabrinabrennancomedy.com/"
                 target="_blank"
@@ -402,8 +404,7 @@ function Unsigned() {
             </span>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -416,9 +417,9 @@ function Unsigned() {
             }}
           >
             A GM-less card-based one-shot TTRPG with QR-integration. Built for new players to jump in without ever opening a rulebook.{' '}
-                <span className="text-yellow-300">D&D</span> meets{' '}
-                <span className="text-yellow-300">Mario Party</span> with a{' '}
-                <span className="text-yellow-300">Sleepy Hollow</span> atmosphere.          
+                <span className="italic">D&D</span> meets{' '}
+                <span className="italic">Mario Party</span> with a{' '}
+                <span className="italic">Sleepy Hollow</span> atmosphere.          
             
             </div>
 
@@ -510,8 +511,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Let's Be Frank</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -524,8 +524,8 @@ function Unsigned() {
             }}
           >
              Work together to communicate taking on the roles of the various body parts of Frankenstein's monster in this{' '}
-                <span className="text-yellow-300">Charades</span> meets{' '}
-                <span className="text-yellow-300">Telephone</span> family party game.       
+                <span className="italic">Charades</span> meets{' '}
+                <span className="italic">Telephone</span> family party game.       
             </div>
 
           {/* Image Column */}
@@ -629,8 +629,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Dog Means Square</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -738,15 +737,14 @@ function Unsigned() {
                 fontSize: isMobile ? '.6em' : '1.4rem', // Adjusts the text size to be smaller
               }}
             >
-              (co-design with{' '}
+              co-design with{' '}
                 <a href="https://philgrossauthor.com/" target="_blank" rel="noopener noreferrer">
                 Phil Gross
-              </a>)
+              </a>
             </span>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -868,15 +866,14 @@ function Unsigned() {
                 fontSize: isMobile ? '.6em' : '1.4rem', // Adjusts the text size to be smaller
               }}
             >
-              (co-design with{' '}
+              co-design with{' '}
                 <a href="https://philgrossauthor.com/" target="_blank" rel="noopener noreferrer">
                 Phil Gross
-              </a>)
+              </a>
             </span>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -991,8 +988,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Disasterpieces</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -1094,8 +1090,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Crocodile Tiers</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -1196,8 +1191,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Puppetiers</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -1209,8 +1203,8 @@ function Unsigned() {
               gridArea: 'text',
             }}
           >
-            <span className="text-yellow-300">Wavelength</span> meets{' '}
-            <span className="text-yellow-300">So Clover</span> in this cooperative party game where players make a tier list with very specific groupings, then work together to get the groupings right.
+            <span className="italic">Wavelength</span> meets{' '}
+            <span className="italic">So Clover</span> in this cooperative party game where players make a tier list with very specific groupings, then work together to get the groupings right.
             </div>
 
           {/* Image Column */}
@@ -1299,8 +1293,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Bricks & Tricks</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -1312,8 +1305,8 @@ function Unsigned() {
               gridArea: 'text',
             }}
           >
-            <span className="text-yellow-300">Jenga</span> meets{' '}
-            <span className="text-yellow-300">trick-taking</span> in this tactical dexterity game where blocks act as your deck of cards.
+            <span className="italic">Jenga</span> meets{' '}
+            <span className="italic">trick-taking</span> in this tactical dexterity game where blocks act as your deck of cards.
             </div>
 
           {/* Image Column */}
@@ -1403,8 +1396,7 @@ function Unsigned() {
           <div className="flex items-center justify-center">Pondcala</div>
         </h2>
         <div
-          className="mt-4 rounded-lg shadow-lg grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
-          style={{
+className="mt-4 rounded-lg  grid sm:grid-rows-[auto auto auto] sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"          style={{
             gridTemplateAreas: isMobile ? `"text" "list" "image"` : `"text image list"`,
           }}
         >
@@ -1416,7 +1408,7 @@ function Unsigned() {
               gridArea: 'text',
             }}
           >
-            Serene <span className="text-yellow-300">mancala-like</span> tactical game in a bowl of water.
+            Serene <span className="italic">mancala-like</span> tactical game in a bowl of water.
             </div>
 
           {/* Image Column */}

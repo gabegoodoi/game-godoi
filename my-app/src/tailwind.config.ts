@@ -17,6 +17,9 @@ const config: Config = {
         dMSerifDisplay: ["'DM Serif Display'", "serif"],
 
       },
+      screens: {
+        'custom-sm': '695px', // Custom breakpoint for 695px
+      },
     },
   },
   plugins: [],

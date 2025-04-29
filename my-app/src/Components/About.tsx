@@ -74,7 +74,7 @@ function About() {
       </div>
 
       <div className="text-left">
-        <h3 className="text-2xl font-bold pt-4 text-pink-200">
+        <h3 className="text-2xl font-bold pt-4 text-teal-400">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" style={{ transform: 'scaleX(-1)' }} />
             <p>Check out my <a href="https://www.linkedin.com/in/gabegodoi/">LinkedIn</a> for more info.</p>

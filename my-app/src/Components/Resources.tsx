@@ -9,96 +9,98 @@ function Resources() {
   };
 
   return (
-    <div className="min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
+    <div id="resources" className="min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <h1 className="text-6xl font-bold pb-4 text-yellow-400">Resources</h1>
 
       {/* Dropdown menu */}
       <div
-        className="bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5 pb-3"
+        id="dropdown-menu"
+        className="bg-[#0a0503]/60 border border-white/10 rounded-lg mb-5"
         style={{
           fontFamily: "'League Spartan', sans-serif",
         }}
       >
         <button
-          onClick={handleDropdownToggle}
-          className="w-full pt-4 text-2xl font-semibold text-pink-300 rounded-lg shadow-lg"
-        >
-          {isDropdownOpen ? 'Close Menu' : 'Open Menu'}
-        </button>
-        {isDropdownOpen && (
-          <ul className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
+            onClick={handleDropdownToggle}
+            id="menu"
+            className="w-full p-2 text-2xl font-semibold rounded-lg shadow-lg"
+          >
+            {isDropdownOpen ? 'Close Menu' : 'Open Menu'}
+          </button>
+          {isDropdownOpen && (
+          <ul id="menu-selection" className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
             <li className="p-2">
-              <a href="#learning-games" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#learning-games" className="block">
                 Playing
               </a>
             </li>
             <li className="p-2">
-              <a href="#learning-jargon" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#learning-jargon" className="block">
                 Terminology
               </a>
             </li>
             <li className="p-2">
-              <a href="#looking-to_learn" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#looking-to_learn" className="block">
                 Podcasts
               </a>
             </li>
             <li className="p-2">
-              <a href="#learning-by-listening" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#learning-by-listening" className="block">
                 Reading
               </a>
             </li>
             <li className="p-2">
-              <a href="#gathering-components" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#gathering-components" className="block">
                 Components
               </a>
             </li>
             <li className="p-2">
-              <a href="#making-prototypes" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#making-prototypes" className="block">
                 Prototyping
               </a>
             </li>
             <li className="p-2">
-              <a href="#documentation" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#documentation" className="block">
                 Documentation
               </a>
             </li>
             <li className="p-2">
-              <a href="#structuring-playtests" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#structuring-playtests" className="block">
                 Playtesting
               </a>
             </li>
             <li className="p-2">
-              <a href="#finding-playtesters" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#finding-playtesters" className="block">
                 Playtesters
               </a>
             </li>
             <li className="p-2">
-              <a href="#finding-communities" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#finding-communities" className="block">
                 Communities
               </a>
             </li>
             <li className="p-2">
-              <a href="#digitizing" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#digitizing" className="block">
                 Digitizing
               </a>
             </li>
             <li className="p-2">
-              <a href="#contests" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#contests" className="block">
                 Contests
               </a>
             </li>
             <li className="p-2">
-              <a href="#conventions" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#conventions" className="block">
                 Conventions
               </a>
             </li>
             <li className="p-2">
-              <a href="#publishers" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#publishers" className="block">
                 Publishers
               </a>
             </li>
             <li className="p-2">
-              <a href="#more" className="block !text-teal-400 hover:!text-teal-400/70">
+              <a href="#more" className="block">
                 More
               </a>
             </li>
@@ -119,6 +121,9 @@ function Resources() {
         </p>
       </div>
 
+      <div id="resource-blurbs">
+
+
       <div id="learning-games" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
@@ -129,7 +134,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         I've heard some designers say that they only play their own games, but continuing to make the time to play new board games has been invaluable to me. It's one of the best ways to get exposed to different mechanics and design ideas. I recommend finding games to try, whether through local cafes, stores, or even online platforms when you can't get out.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.youtube.com/channel/UCGK9n7svoIjuaQfRIBJXkqQ", "_blank")}
@@ -156,7 +161,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
             Games are full of terminology that can be confusing at first but can also serve as a great shorthand for communicating more complex concepts, mechanisms, systems, and ideas.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
                 onClick={() => window.open("https://www.doalg.co.uk/post/the-abc-of-board-gaming-terms", "_blank")}
@@ -188,7 +193,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         Reading about game design has been one of my favorite ways to reflect on my process. There are so many great articles and books out there that offer new perspectives and challenge the way I think about design.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
                 onClick={() => window.open("https://koboldpress.com/kpstore/product/complete-kobold-guide-to-game-design/", "_blank")}
@@ -226,7 +231,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         Podcasts are a great way for me to keep learning while doing other things. They let me hear from experienced designers and catch little insights that shape how I approach my own projects.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
             <li
                 className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
                 onClick={() => window.open("https://jellybean.games/funproblems/", "_blank")}
@@ -259,7 +264,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         Thrift stores have been a goldmine for me when sourcing components for prototypes. Secondhand games are cheap and provide tons of useful pieces. It’s an easy way to get started with prototyping without breaking the bank. That being said, some of my sources for key supplies might seem pretty straightforward but worth mentioning.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://locations.michaels.com/", "_blank")}
@@ -298,7 +303,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         Getting a prototype on the table quickly is key, and graphic design tools have made that process so much easier. These resources help me turn rough ideas into something tangible that I can test and refine.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://canva.com/", "_blank")}
@@ -331,7 +336,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             When I’m working on rules or component docs, templates save me a lot of time. They help me stay organized and get my thoughts down more clearly, which is crucial when you’re iterating on a game.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://docs.google.com/document/d/1k1Pa6A4Sf7BtzZMuWeao5ODVKo9xiX_KJGXRmlgf4Ak/edit?usp=sharing", "_blank")}
@@ -402,7 +407,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             Playtesting is an ongoing part of my process. Every test gives me new insights into how my game functions in practice. I always try to have a clear goal for each test, and being open to feedback has made a huge difference.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.thegamespeople.co.uk/resources-for-game-designers/graphical-playtest-feedback-form", "_blank")}
@@ -433,7 +438,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             For me, attending local playtesting events like <a href="https://www.meetup.com/first-to-play-los-angeles-board-game-playtesters/" target="_blank" rel="noopener noreferrer">First Play LA</a> has been invaluable. Getting real-time feedback from other designers and playtesters is crucial for improving and iterating on designs.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.breakmygame.com/weekly-online-playtesting", "_blank")}
@@ -465,7 +470,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             Connecting with other designers has accelerated my learning. Whether through in-person events or online communities, it’s been a game-changer to talk shop and swap ideas. I recommend checking out the <a href="https://discord.gg/n8k2n5qH" target="_blank" rel="noopener noreferrer">LA Playtest Exchange Discord</a> if you’re in LA.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
             <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.ttgda.org/", "_blank")}
@@ -515,7 +520,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             For digital playtesting or to send your game to remote testers, platforms like <a href="https://cardboardedison.com/virtual-tabletops" target="_blank" rel="noopener noreferrer">Cardboard Edison</a> provide solid options. These platforms help you expand your reach without being in the same room as your testers.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://screentop.gg/ ", "_blank")}
@@ -545,7 +550,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
                 There are a number of competitions that you can submit to that can help you get your game in front of publishers and other designers. They also often have fun prompts if you're looking for that extra motivation to get your idea juices going.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
             <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://boardgamegeek.com/forum/974620/bgg/design-contests", "_blank")}
@@ -575,7 +580,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
                 If you want to get your game in front of publishers, conventions are a great way to do it. There are a lot of conventions out there, but there are a couple of important ones in the US worth mentioning. I should say, in addition to these I've been told to try out NY Toy Fair & Chicago Toy Fair, but I have yet to attend.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://www.gencon.com/", "_blank")}
@@ -629,7 +634,7 @@ function Resources() {
             <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left">
             These directories have been helpful for me in getting my foot in the door and understanding who to reach out to when I'm ready to pitch a game.
             </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li 
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://cardboardedison.com/directoryinfo", "_blank")}
@@ -660,7 +665,7 @@ function Resources() {
         <p style={{ fontFamily: "'League Spartan', sans-serif" }} className="text-2xl text-left"> 
         Thanks for checking out my list! This is just a snapshot of the resources I’ve used on my own journey. There are many more out there, and I’d be happy to point you in the right direction if you’re looking for even more.
         </p>
-        <ul className="mt-4 border border-white rounded-lg divide-y divide-white text-2xl text-pink-200" style={{ backgroundColor: '#021631', fontFamily: "'League Spartan', sans-serif" }}>
+        <ul className="mt-4 rounded-lg text-2xl text-pink-200" style={{ fontFamily: "'League Spartan', sans-serif" }}>
           <li
             className="p-4 rounded-lg hover:bg-[#032e2b] transition cursor-pointer"
             onClick={() => window.open("https://cardboardedison.com/about", "_blank")}
@@ -718,6 +723,7 @@ function Resources() {
         </ul>
       </div>  
       
+    </div>
     </div>
   );
 }
