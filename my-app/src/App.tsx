@@ -5,7 +5,6 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Resources from './Components/Resources';
 import Unsigned from './Components/Unsigned';
-import gabelogo from './assets/gabelogo.svg';
 import gabelogoPINK from './assets/gabelogoPINK.svg';
 import Contact from './Components/Contact';
 import diceRollSound from './assets/diceRollSound.mp3';
