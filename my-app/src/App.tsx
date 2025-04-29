@@ -14,10 +14,17 @@ import pageTurnSound from './assets/pageTurnSound.mp3';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [rotate, setRotate] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark' | 'party'>('dark'); // State for theme
+  const [theme, setTheme] = useState<'light' | 'dark' | 'party'>(() => {
+    // Retrieve the theme from localStorage or default to 'dark'
+    return (localStorage.getItem('theme') as 'light' | 'dark' | 'party') || 'dark';
+  });
 
   useEffect(() => {
-    document.body.className = theme; // Set the body class to 'light', 'dark', or 'party'
+    // Set the body class to the current theme
+    document.body.className = theme;
+
+    // Store the current theme in localStorage
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const handleLogoClick = () => {
@@ -62,7 +69,7 @@ function App() {
             : 'border-gray-300'
         } z-50`}
       >
-        <div className="flex items-center justify-between">
+        <div className="px-4 flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img
               src={gabelogoPINK}
@@ -71,7 +78,7 @@ function App() {
               onClick={handleLogoClick}
             />
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 overflow-hidden">
             {/* Hamburger Menu for Small Screens */}
             <button
               className="sm:hidden text-teal-400 focus:outline-none"
@@ -82,30 +89,30 @@ function App() {
 
             {/* Links for Larger Screens */}
             <div className={`hidden sm:flex gap-6`}>
-              <a
-                href="/about"
-                className="text-lg transition-colors"
-                onClick={handlePageClick}
-              >
-                About
-              </a>
               <Link
-                to="/available"
-                className="text-lg transition-colors"
+                to="/about"
+                className="text-lg transition-colors whitespace-nowrap"
                 onClick={handlePageClick}
               >
-                Available Games
+                About Me
               </Link>
               <Link
                 to="/resources"
-                className="text-lg transition-colors"
+                className="text-lg transition-colors whitespace-nowrap"
                 onClick={handlePageClick}
               >
                 Designer Resources
               </Link>
               <Link
+                to="/available"
+                className="text-lg transition-colors whitespace-nowrap"
+                onClick={handlePageClick}
+              >
+                Available Games
+              </Link>
+              <Link
                 to="/contact"
-                className="text-lg transition-colors"
+                className="text-lg transition-colors whitespace-nowrap"
                 onClick={handlePageClick}
               >
                 Contact
@@ -130,7 +137,7 @@ function App() {
           <div className="sm:hidden flex flex-col gap-4 mt-4">
             <Link
               to="/about"
-              className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors"
+              className="text-lg text-teal-400 hover:text-amber-300 transition-colors"
               onClick={() => {
                 handlePageClick();
                 setMenuOpen(false);
@@ -140,7 +147,7 @@ function App() {
             </Link>
             <Link
               to="/available"
-              className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors"
+              className="text-lg text-teal-400 hover:text-amber-300 transition-colors"
               onClick={() => {
                 handlePageClick();
                 setMenuOpen(false);
@@ -150,7 +157,7 @@ function App() {
             </Link>
             <Link
               to="/resources"
-              className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors"
+              className="text-lg text-teal-400 hover:text-amber-300 transition-colors"
               onClick={() => {
                 handlePageClick();
                 setMenuOpen(false);
@@ -160,7 +167,7 @@ function App() {
             </Link>
             <Link
               to="/contact"
-              className="text-lg !text-teal-400 hover:!text-amber-300 transition-colors"
+              className="text-lg text-teal-400 hover:text-amber-300 transition-colors"
               onClick={() => {
                 handlePageClick();
                 setMenuOpen(false);

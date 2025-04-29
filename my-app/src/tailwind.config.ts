@@ -18,7 +18,10 @@ const config: Config = {
 
       },
       screens: {
-        'custom-sm': '695px', // Custom breakpoint for 695px
+        'sm': '768px', // Override default 640px
+        'md': '1024px',
+        'lg': '1280px',
+        'xl': '1536px',
       },
     },
   },
@@ -26,3 +29,5 @@ const config: Config = {
 };
 
 export default config;
+
+

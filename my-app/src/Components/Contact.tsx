@@ -51,7 +51,7 @@ function Contact() {
 
     return (
         <section style={{ fontFamily: "'Dm Serif Display', serif" }}>
-            <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md contact-page">
                 <h2 className="text-6xl font-bold pb-4 text-yellow-400">
                     Contact Me
                 </h2>
@@ -131,7 +131,7 @@ function Contact() {
                     </div>
                     <button
                         type="submit"
-                        className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg !bg-teal-700 sm:w-fit hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                        className="contact-button text-white p-2 border rounded-lg shadow"
                     >
                         Send message
                     </button>

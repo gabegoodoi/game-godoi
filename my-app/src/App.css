@@ -10,7 +10,29 @@ body.dark .transition-colors:hover  {
   color: oklch(71.8% 0.202 349.761);
 }
 
+body.light button {
+  color: oklch(62.3% 0.214 259.815);
+}
 
+body.party .contact-button {
+  background: oklch(71.8% 0.202 349.761);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0 5px #1f0202, 0px 0px 5px #1f0202;
+}
+
+body.dark .contact-button {
+  background: oklch(62.3% 0.214 259.815);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0 5px #1f0202, 0px 0px 5px #1f0202;
+}
+
+body.light .contact-button {
+  background: oklch(62.3% 0.214 259.815);
+  color: white;
+  cursor: pointer;
+}
 
 body {
   @apply m-0 p-0;
@@ -39,6 +61,7 @@ body.dark #menu{
 }
 
 body.light #menu{
+  color: oklch(62.3% 0.214 259.815);
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -127,18 +150,16 @@ body.dark #menu-selection a {
 }
 
 body.light #resource-blurbs li {
-  background: #fff0d6;
+  background: #d6f1ff;
   margin-bottom: 10px
 }
 
 body.dark #resource-blurbs li {
   background: #021631;
-  border: 1px solid white;
   transition: background 0.3s ease-in-out;
   cursor: pointer;
   margin-bottom: 10px;
-  border-top: 1px solid white; /* Add a top border to all child elements except the first */
-  
+  box-shadow: 0px 0 5px #1f0202, 0px 0px 5px #1f0202;
 }
 
 body.dark #resource-blurbs li:hover {
@@ -148,17 +169,30 @@ body.dark #resource-blurbs li:hover {
 
 body.party #resource-blurbs li {
   background: #021631;
-  border: 1px solid white;
   transition: background 0.3s ease-in-out;
   cursor: pointer;
   margin-bottom: 10px;
-  border-top: 1px solid white; /* Add a top border to all child elements except the first */
-  
+  box-shadow: 0px 0 5px #1f0202, 0px 0px 5px #1f0202;
 }
 
 body.party #resource-blurbs li:hover {
   background: #032e2b;
+}
 
+body.party .shadow-lg {
+  box-shadow: 0px 0 5px #00000097;
+
+}
+
+body.light #resource-blurbs li:hover {
+  background: oklch(89.9% 0.061 343.231);
+
+}
+
+body.light #resource-blurbs li {
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 body.dark #menu-selection a:hover {
@@ -171,6 +205,14 @@ body.light h2 div{
 
 body.light h3{
   color: #6e2614;
+}
+
+body.party h3{
+  color: oklch(90.5% 0.182 98.111);
+}
+
+body.party #what-is-this-page-text{
+  color: oklch(90.5% 0.182 98.111);
 }
 
 body.light .text-pink-200{

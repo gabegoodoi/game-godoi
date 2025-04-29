@@ -1,6 +1,4 @@
-import About from './About';
 import Resources from './Resources';
-import Unsigned from './Unsigned';
 
 function Home() {
   return (
@@ -15,8 +13,6 @@ function Home() {
             offering tools, links, and personal insights that I wish I had when starting out.
           </p>
         </div>
-      <About />
-      <Unsigned />
       <Resources />
     </div>
   );
