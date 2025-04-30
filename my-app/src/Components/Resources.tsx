@@ -1,9 +1,18 @@
-import { useState } from 'react';
 import RotStar from '../assets/RotStar.gif';
+import { useState, useEffect } from 'react';
+import fireSound from '../assets/fireSound.mp3';
+import splash from '../assets/splash.mp3';
+import sizzle from '../assets/sizzle.mp3';
+import bucket from '../assets/bucket.gif';
 
 function Resources() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isWhatIsThisPageVisible, setIsWhatIsThisPageVisible] = useState(false);
+  const [showCursor, setShowCursor] = useState(false);
+  const [showResetImage, setShowResetImage] = useState(false);
+  const [hideImage, setHideImage] = useState(false);
+  const [audioInstance, setAudioInstance] = useState<HTMLAudioElement | null>(null);
+
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -11,6 +20,60 @@ function Resources() {
 
   const toggleWhatIsThisPage = () => {
     setIsWhatIsThisPageVisible(!isWhatIsThisPageVisible);
+  };
+
+  useEffect(() => {
+    if (!showCursor) return;
+
+    const cursor = document.createElement('div');
+    cursor.id = 'custom-cursor';
+    cursor.style.position = 'absolute';
+    cursor.style.pointerEvents = 'none';
+    document.body.appendChild(cursor);
+
+    const moveCursor = (e: MouseEvent) => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    };
+
+    document.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      document.removeEventListener('mousemove', moveCursor);
+      document.body.removeChild(cursor);
+    };
+  }, [showCursor]);
+
+  const handleRotStarClick = () => {
+    setShowCursor(true);
+    setShowResetImage(true);
+    setHideImage(false);
+    const audio = new Audio(fireSound);
+    audio.volume = 0.3;
+    audio.loop = true;
+    audio.play();
+    setAudioInstance(audio);
+  };
+
+  const handleResetCursor = () => {
+    const audioSplash = new Audio(splash);
+    audioSplash.volume = 0.3;
+    audioSplash.play();
+
+    const audioSizzle = new Audio(sizzle);
+    audioSizzle.volume = 0.1;
+    audioSizzle.playbackRate = 12;
+    audioSizzle.play();
+
+    setShowCursor(false);
+    setHideImage(true);
+    if (audioInstance) {
+      audioInstance.pause();
+      audioInstance.currentTime = 0;
+    }
+    setTimeout(() => {
+      setShowResetImage(false);
+    }, 500);
   };
 
 
@@ -131,7 +194,7 @@ function Resources() {
         <div id="what-is-this-page" className="text-left">
           <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-              <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
+              <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
               What is this page?
             </div>
           </h2>
@@ -147,7 +210,7 @@ function Resources() {
       <div id="learning-games" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Learning Games
           </div>
         </h2>
@@ -174,7 +237,7 @@ function Resources() {
       <div id="learning-jargon" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
             Learning Jargon
           </div>
         </h2>
@@ -206,7 +269,7 @@ function Resources() {
       <div id="looking-to-learn" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Looking to Learn
           </div>
         </h2>
@@ -244,7 +307,7 @@ function Resources() {
       <div id="learning-by-listening" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
             Learning by Listening
           </div>
         </h2>
@@ -277,7 +340,7 @@ function Resources() {
       <div id="gathering-components" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
           Gathering Components
           </div>
         </h2>
@@ -316,7 +379,7 @@ function Resources() {
       <div id="making-prototypes" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
             Making Prototypes
           </div>
         </h2>
@@ -349,7 +412,7 @@ function Resources() {
       <div id="documentation" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Making Documentation
             </div>
             </h2>
@@ -420,7 +483,7 @@ function Resources() {
       <div id="structuring-playtests" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
                 Structuring Playtests
             </div>
             </h2>
@@ -451,7 +514,7 @@ function Resources() {
         <div id="finding-playtesters" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Finding Playtesters
             </div>
             </h2>
@@ -483,7 +546,7 @@ function Resources() {
       <div id="finding-communities" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
                 Finding Communities
             </div>
             </h2>
@@ -533,7 +596,7 @@ function Resources() {
       <div id="digitizing" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Digitizing Your Prototype
             </div>
             </h2>
@@ -563,7 +626,7 @@ function Resources() {
       <div id="contests" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
                 Making a Game of It
             </div>
             </h2>
@@ -593,7 +656,7 @@ function Resources() {
       <div id="conventions" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
             Going To Conventions
             </div>
             </h2>
@@ -647,7 +710,7 @@ function Resources() {
       <div id="publishers" className="text-left" style={{ scrollMarginTop: '100px' }}>
             <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
-                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
+                <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" onClick={handleRotStarClick}/>
                 Finding Publishers
             </div>
             </h2>
@@ -678,7 +741,7 @@ function Resources() {
       <div id="more" className="text-left" style={{ scrollMarginTop: '100px' }}>
         <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
-          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
+          <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" onClick={handleRotStarClick}/>
           Missing something?
           </div>
         </h2>
@@ -744,7 +807,19 @@ function Resources() {
       </div>  
       
     </div>
+    {showResetImage && (
+        <img
+          src={bucket} // Replace with your desired image
+          alt="Reset Cursor"
+          className={`fixed bottom-4 right-4 w-16 h-16 cursor-pointer transition-transform duration-1000 ${
+            hideImage ? 'translate-x-full' : ''
+          }`}
+          onMouseEnter={handleResetCursor}
+        />
+      )}
+    
     </div>
+    
   );
 }
 
