@@ -1,6 +1,6 @@
 import RotStar from '../assets/RotStar.gif';
 import { useState, useEffect } from 'react';
-import fireSound from '../assets/fireSound.mp3';
+import fireSound from '../assets/fireSound.m4a';
 import splash from '../assets/splash.mp3';
 import sizzle from '../assets/sizzle.mp3';
 import bucket from '../assets/bucket.gif';
