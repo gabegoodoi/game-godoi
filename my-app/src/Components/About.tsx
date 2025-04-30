@@ -84,8 +84,8 @@ function About() {
     <div className="w-full min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <div className="text-left">
         <h2 className="text-5xl font-bold pt-4 text-yellow-300">
-          <div className="flex cursor-pointer items-center justify-start">
-            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4" onClick={handlePicClick}/>
+          <div className="flex items-center justify-start">
+            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4 cursor-pointer" onClick={handlePicClick}/>
             My Story
           </div>
         </h2>

@@ -52,7 +52,7 @@ function Contact() {
     return (
         <section style={{ fontFamily: "'Dm Serif Display', serif" }}>
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md contact-page">
-                <h2 className="text-6xl font-bold pb-4 text-yellow-400">
+                <h2 className="text-5xl font-bold pb-4 text-yellow-400">
                     Contact Me
                 </h2>
                 <p

@@ -49,7 +49,7 @@ function Unsigned() {
         fontFamily: "'Dm Serif Display', serif",
       }}
     >
-      <h1 className="text-6xl font-bold pb-4 text-yellow-400">Available Games</h1>
+      <h1 className="text-5xl font-bold pb-4 text-yellow-400">Available Games</h1>
 
       <div>
         <div id="what-is-this-page" className="text-left">

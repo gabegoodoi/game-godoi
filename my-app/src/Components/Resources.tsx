@@ -79,7 +79,7 @@ function Resources() {
 
   return (
     <div id="resources" className="min-h-screen pt-6 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
-      <h1 className="text-6xl font-bold pb-4 text-yellow-400">Resources</h1>
+      <h1 className="text-5xl font-bold pb-4 text-yellow-400">Designer Resources</h1>
 
       {/* Dropdown menu */}
       <div
