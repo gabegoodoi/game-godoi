@@ -511,3 +511,7 @@ body {
   background-repeat: no-repeat;
   transform: translate(-50%, -50%); /* Center the cursor image */
 }
+
+body.light .bg-black {
+  background: #ffffff;
+}
