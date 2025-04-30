@@ -3,13 +3,19 @@ import RotStar from '../assets/RotStar.gif';
 
 function Resources() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isWhatIsThisPageVisible, setIsWhatIsThisPageVisible] = useState(false);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const toggleWhatIsThisPage = () => {
+    setIsWhatIsThisPageVisible(!isWhatIsThisPageVisible);
+  };
+
+
   return (
-    <div id="resources" className="min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
+    <div id="resources" className="min-h-screen pt-6 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <h1 className="text-6xl font-bold pb-4 text-yellow-400">Resources</h1>
 
       {/* Dropdown menu */}
@@ -29,6 +35,18 @@ function Resources() {
           </button>
           {isDropdownOpen && (
           <ul id="menu-selection" className="mt-2 rounded-lg shadow-lg text-yellow-300 text-2xl">
+             <li className="p-2">
+              <a
+                href="#what-is-this-page"
+                className="block cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleWhatIsThisPage();
+                }}
+              >
+                What is this page?
+              </a>
+            </li>
             <li className="p-2">
               <a href="#learning-games" className="block">
                 Playing
@@ -109,23 +127,25 @@ function Resources() {
       </div>
 
       {/* Content sections */}
-      <div id="what-is-this-page" className="text-left">
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
-          <div className="flex items-center justify-start">
-            <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
-            What is this page?
-          </div>
-        </h2>
-        <p className="text-2xl text-left" style={{ fontFamily: "'League Spartan', sans-serif" }}>
-          If you want to design games, you should try! Game design can feel overwhelming at first, but there are countless resources that helped and continue to help me along the way. Below are some of the tools and sites I find useful.
-        </p>
-      </div>
+      {isWhatIsThisPageVisible && (
+        <div id="what-is-this-page" className="text-left">
+          <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
+            <div className="flex items-center justify-start">
+              <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
+              What is this page?
+            </div>
+          </h2>
+          <p className="text-2xl text-left" style={{ fontFamily: "'League Spartan', sans-serif" }}>
+            If you want to design games, you should try! Game design can feel overwhelming at first, but there are countless resources that helped and continue to help me along the way. Below are some of the tools and sites I find useful.
+          </p>
+        </div>
+      )}
 
       <div id="resource-blurbs">
 
 
       <div id="learning-games" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Learning Games
@@ -152,7 +172,7 @@ function Resources() {
       </div>
 
       <div id="learning-jargon" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Learning Jargon
@@ -184,7 +204,7 @@ function Resources() {
       </div>
 
       <div id="looking-to-learn" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Looking to Learn
@@ -222,7 +242,7 @@ function Resources() {
       </div>
 
       <div id="learning-by-listening" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Learning by Listening
@@ -255,7 +275,7 @@ function Resources() {
 
 
       <div id="gathering-components" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
           <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
           Gathering Components
@@ -294,7 +314,7 @@ function Resources() {
       </div>
 
       <div id="making-prototypes" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
             Making Prototypes
@@ -327,7 +347,7 @@ function Resources() {
       </div>
 
       <div id="documentation" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Making Documentation
@@ -398,7 +418,7 @@ function Resources() {
 
 
       <div id="structuring-playtests" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
                 <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
                 Structuring Playtests
@@ -429,7 +449,7 @@ function Resources() {
       </div>  
 
         <div id="finding-playtesters" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Finding Playtesters
@@ -461,7 +481,7 @@ function Resources() {
       </div>       
 
       <div id="finding-communities" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
                 <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar"/>
                 Finding Communities
@@ -511,7 +531,7 @@ function Resources() {
       </div>   
 
       <div id="digitizing" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Digitizing Your Prototype
@@ -541,7 +561,7 @@ function Resources() {
       </div>    
 
       <div id="contests" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
                 <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
                 Making a Game of It
@@ -571,7 +591,7 @@ function Resources() {
       </div>   
 
       <div id="conventions" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
             Going To Conventions
@@ -625,7 +645,7 @@ function Resources() {
       </div>   
 
       <div id="publishers" className="text-left" style={{ scrollMarginTop: '100px' }}>
-            <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+            <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
             <div className="flex items-center justify-start">
                 <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rotstar" />
                 Finding Publishers
@@ -656,7 +676,7 @@ function Resources() {
       </div> 
 
       <div id="more" className="text-left" style={{ scrollMarginTop: '100px' }}>
-        <h2 className="text-4xl font-bold pt-4 text-yellow-300">
+        <h2 className="text-4xl font-bold pt-4 text-yellow-300 pb-6">
           <div className="flex items-center justify-start">
           <img src={RotStar} alt="Rotating Star" className="w-24 h-24 mr-4 rot-star-flipped rotstar" />
           Missing something?

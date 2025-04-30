@@ -89,13 +89,6 @@ function App() {
             {/* Links for Larger Screens */}
             <div className={`hidden sm:flex gap-6`}>
               <Link
-                to="/about"
-                className="text-lg transition-colors whitespace-nowrap"
-                onClick={handlePageClick}
-              >
-                About Me
-              </Link>
-              <Link
                 to="/resources"
                 className="text-lg transition-colors whitespace-nowrap"
                 onClick={handlePageClick}
@@ -108,6 +101,13 @@ function App() {
                 onClick={handlePageClick}
               >
                 Available Games
+              </Link>
+              <Link
+                to="/about"
+                className="text-lg transition-colors whitespace-nowrap"
+                onClick={handlePageClick}
+              >
+                About Me
               </Link>
               <Link
                 to="/contact"

@@ -1,14 +1,29 @@
 // About.tsx
 import RotStar from '../assets/RotStar.gif';
 import profile from '../assets/profile.png';
+import ouch from '../assets/ouch.m4a';
+import ouch2 from '../assets/ouch2.m4a';
+import ouch3 from '../assets/ouch3.m4a';
+import ouch4 from '../assets/ouch4.m4a';
+
 
 function About() {
+  
+  const handlePicClick = () => {
+    const sounds = [ouch, ouch2, ouch3, ouch4];
+    const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+    const audio = new Audio(randomSound);
+    audio.volume = .3;
+    audio.playbackRate = .9;
+    audio.play();
+  };
+
   return (
     <div className="w-full min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <div className="text-left">
         <h2 className="text-5xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4 rotstar" />
+            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4" onClick={handlePicClick}/>
             My Story
           </div>
         </h2>
