@@ -493,6 +493,10 @@ body.light .text-pink-400{
   }
 }
 
+.rotstar {
+  cursor: pointer;
+}
+
 /* filepath: /Users/gabrielgodoi/Documents/MacbookAir/coding/MySite/my-app/src/App.css */
 #custom-cursor {
   position: fixed;
