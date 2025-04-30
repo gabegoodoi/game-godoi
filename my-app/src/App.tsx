@@ -17,6 +17,7 @@ function App() {
     // Retrieve the theme from localStorage or default to 'dark'
     return (localStorage.getItem('theme') as 'light' | 'dark' | 'party') || 'dark';
   });
+  
 
   useEffect(() => {
     // Set the body class to the current theme

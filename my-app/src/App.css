@@ -492,3 +492,22 @@ body.light .text-pink-400{
     display: none;
   }
 }
+
+
+body {
+  cursor: url('assets/Cursor.gif') 16 16, auto;
+}
+
+
+/* filepath: /Users/gabrielgodoi/Documents/MacbookAir/coding/MySite/my-app/src/App.css */
+#custom-cursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  pointer-events: none; /* Prevent cursor from blocking clicks */
+  z-index: 9999;
+  background-image: url('/cursor-fire.gif'); /* Ensure the path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%); /* Center the cursor image */
+}
