@@ -4,6 +4,8 @@ import fireSound from '../assets/fireSound.m4a';
 import splash from '../assets/splash.mp3';
 import sizzle from '../assets/sizzle.mp3';
 import bucket from '../assets/bucket.gif';
+import hot from '../assets/hot.m4a';
+import relief from '../assets/relief.m4a';
 
 function Resources() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -45,6 +47,10 @@ function Resources() {
   }, [showCursor]);
 
   const handleRotStarClick = () => {
+    if (audioInstance) {
+      // If an audio instance is already playing, do nothing
+      return;
+  }
     setShowCursor(true);
     setShowResetImage(true);
     setHideImage(false);
@@ -52,7 +58,15 @@ function Resources() {
     audio.volume = 0.3;
     audio.loop = true;
     audio.play();
+
+    const hotAudio = new Audio(hot);
+    hotAudio.volume = 0.3;
+    hotAudio.playbackRate = 2;
+    hotAudio.play();
+    
     setAudioInstance(audio);
+    document.body.style.cursor = 'grab'; // Hide the default cursor
+
   };
 
   const handleResetCursor = () => {
@@ -60,10 +74,21 @@ function Resources() {
     audioSplash.volume = 0.3;
     audioSplash.play();
 
+    if (audioInstance) {
+      audioInstance.pause(); // Stop the audio
+      audioInstance.currentTime = 0; // Reset the audio to the beginning
+      setAudioInstance(null); // Reset the audio instance to allow reactivation
+    }
+
     const audioSizzle = new Audio(sizzle);
     audioSizzle.volume = 0.1;
     audioSizzle.playbackRate = 12;
     audioSizzle.play();
+
+    const reliefAudio = new Audio(relief);
+    reliefAudio.volume = 0.3;
+    reliefAudio.playbackRate = 1;
+    reliefAudio.play();
 
     setShowCursor(false);
     setHideImage(true);
@@ -74,6 +99,7 @@ function Resources() {
     setTimeout(() => {
       setShowResetImage(false);
     }, 500);
+    document.body.style.cursor = 'default'; // Reset the cursor to default
   };
 
 

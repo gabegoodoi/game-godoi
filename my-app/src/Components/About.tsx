@@ -9,6 +9,8 @@ import ouch from '../assets/ouch.m4a';
 import ouch2 from '../assets/ouch2.m4a';
 import ouch3 from '../assets/ouch3.m4a';
 import ouch4 from '../assets/ouch4.m4a';
+import hot from '../assets/hot.m4a';
+import relief from '../assets/relief.m4a';
 import { useEffect, useState } from 'react';
 
 
@@ -41,6 +43,10 @@ function About() {
   }, [showCursor]);
 
   const handleRotStarClick = () => {
+    if (audioInstance) {
+        // If an audio instance is already playing, do nothing
+        return;
+    }
     setShowCursor(true); // Show the custom cursor when the rotStar image is clicked
     setShowResetImage(true); // Show the reset image
     setHideImage(false); // Ensure the image is visible
@@ -49,7 +55,15 @@ function About() {
     audio.loop = true; // Enable looping
     audio.play();
     setAudioInstance(audio); // Store the audio instance in state
-  };
+
+    const hotAudio = new Audio(hot);
+    hotAudio.volume = 0.3;
+    hotAudio.playbackRate = 2;
+    hotAudio.play();
+
+    document.body.style.cursor = 'grab'; // Hide the default cursor
+  
+};
 
   const handlePicClick = () => {
     const sounds = [ouch, ouch2, ouch3, ouch4];
@@ -70,16 +84,26 @@ function About() {
     audioSizzle.playbackRate = 12;
     audioSizzle.play();
 
+    const reliefAudio = new Audio(relief);
+    reliefAudio.volume = 0.3;
+    reliefAudio.playbackRate = 1;
+    reliefAudio.play();
+
     setShowCursor(false); // Reset the custom cursor
     setHideImage(true); // Trigger the animation to move the image off-screen
     if (audioInstance) {
       audioInstance.pause(); // Stop the audio
       audioInstance.currentTime = 0; // Reset the audio to the beginning
+      setAudioInstance(null); // Reset the audio instance to allow reactivation
     }
     setTimeout(() => {
       setShowResetImage(false); // Hide the reset image after the animation completes
     }, 500); // Match the duration of the CSS transition
+
+    document.body.style.cursor = 'default'; // Hide the default cursor
   };
+
+
   return (
     <div className="w-full min-h-screen p-4 text-pink-400" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <div className="text-left">
