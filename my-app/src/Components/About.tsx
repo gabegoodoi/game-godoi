@@ -114,42 +114,32 @@ function About() {
           </div>
         </h2>
         <div>
-          <p
-            style={{ fontFamily: "'League Spartan', sans-serif" }}
-            className="text-2xl pt-4 text-yellow-250"
-          >
-            I am a board game designer and software developer with a passion for bringing people together through interactive experiences to make lasting memories.
-            <br></br>
-            <br></br>
-            <div>
-            Before transitioning into tech and games, I worked as a documentary producer — with credits on two Oscar-winning short films: 
-              <a href="https://www.youtube.com/watch?v=vPFkcoTfr7g"> The Queen of Basketball</a> and 
-              <a href="https://www.youtube.com/watch?v=xttrkgKXtZ4"> The Last Repair Shop</a>. 
-            </div>
-          </p>
-        </div>
-      </div>
-
-      
-
-      <div className="text-left">
         <h3 className="text-2xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" onClick={handleRotStarClick}/>
-            Worked @ Breakwater Studios for 5 years
+            Game Design & Development
           </div>
         </h3>
-        <div>
           <p
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
           >
-            I got my start at Breakwater Studios, where I wore many hats — producing, coordinating, and managing 
-  award-winning documentary and commercial projects.
-  <br /><br />
-  One highlight was our <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a> on the COVAX initiative, celebrating 75 years of UNICEF’s global impact during the COVID-19 crisis. 
-  It was an honor to help tell such an important story. 
-  (<a href="https://help.unicef.org/">Support UNICEF</a> if you can — always a good cause.)
+          I design games to to empower people to connect, make lasting memories, and have fun doing it. That's the mission; crafting play experiences that bring people closer together.
+          <br /><br />
+          Since 2022 I’ve designed and co-designed over 30 games, signed publishing deals, and won the Dice Tower West Design Championship. I build physical and digital prototypes, write rulebooks, and relentlessly seek out the fun through playtest and iteration cycles.
+        <br /><br />
+        I work with clients to create unique experiences—like a tarot-inspired bookless, GM-less tabletop roleplaying game built with only a deck of cards and QR technology.
+        <br /><br />
+        These days, alongside game design, I work as a software engineer—building full-stack web applications and digital tools that enhance interactivity.
+        <br /><br />
+        <div>
+          Outside of interactive media, I’m also an accomplished documentary producer, with credits on two Oscar-winning short films:  
+          <a href="https://www.youtube.com/watch?v=vPFkcoTfr7g"> The Queen of Basketball</a> and  
+          <a href="https://www.youtube.com/watch?v=xttrkgKXtZ4"> The Last Repair Shop</a>.
+          <br /><br />
+          Traveling the world, meeting people, and helping share their stories was a privilege—and it ultimately led me to games. Games are more than entertainment; they invite people to shape their own narratives and share them with others around the table.
+        </div>
+
           </p>
         </div>
       </div>
@@ -167,9 +157,30 @@ function About() {
             style={{ fontFamily: "'League Spartan', sans-serif" }}
             className="text-2xl pt-4 text-yellow-250"
           >
-            After five years at Breakwater Studios, I moved into freelance producing and project management. 
-  I’ve collaborated with a range of clients across film and digital media, including the recent Emmy-winning, 
+  I collaborated with a range of clients across film and digital media, including the recent Emmy-winning, 
   Tribeca-selected short film <a href="https://www.imdb.com/title/tt34219099/">The Hicks Happy Hour</a>.
+          </p>
+        </div>
+      </div>
+
+      <div className="text-left">
+        <h3 className="text-2xl font-bold pt-4 text-yellow-300">
+          <div className="flex items-center justify-start">
+            <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" onClick={handleRotStarClick}/>
+            Producer @ Breakwater Studios for 5 years
+          </div>
+        </h3>
+        <div>
+          <p
+            style={{ fontFamily: "'League Spartan', sans-serif" }}
+            className="text-2xl pt-4 text-yellow-250"
+          >
+            I got my start at Breakwater Studios, where I wore many hats — producing, coordinating, and managing 
+  award-winning documentary and commercial projects.
+  <br /><br />
+  One highlight was our <a href="https://www.youtube.com/watch?v=GB1IMeZBRMs">UNICEF documentary</a> on the COVAX initiative, celebrating 75 years of UNICEF’s global impact during the COVID-19 crisis. 
+  It was an honor to help tell such an important story. 
+  (<a href="https://help.unicef.org/">Support UNICEF</a> if you can — always a good cause.)
           </p>
         </div>
       </div>
