@@ -10,6 +10,10 @@ import ouch2 from '../assets/ouch2.m4a';
 import ouch3 from '../assets/ouch3.m4a';
 import ouch4 from '../assets/ouch4.m4a';
 import hot from '../assets/hot.m4a';
+import move from '../assets/move.m4a';
+import move2 from '../assets/move2.m4a';
+import move3 from '../assets/move3.m4a';
+import move4 from '../assets/move4.m4a';
 import relief from '../assets/relief.m4a';
 import { useEffect, useState } from 'react';
 
@@ -109,7 +113,21 @@ function About() {
       <div className="text-left">
         <h2 className="text-5xl font-bold pt-4 text-yellow-300">
           <div className="flex items-center justify-start">
-            <img src={profile} alt="Gabe pic" className="w-24 h-24 mr-4 cursor-pointer" onClick={handlePicClick}/>
+            <img
+              src={profile}
+              alt="Gabe pic"
+              className="w-24 h-24 mr-4 cursor-pointer"
+              onClick={handlePicClick}
+              draggable="true" // Enable dragging
+              onDragStart={() => {
+                const sounds = [move, move2, move3, move4];
+                const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+                const audio = new Audio(randomSound);
+                audio.volume = 0.3;
+                audio.playbackRate = 1;
+                audio.play();
+              }}
+            />
             My Story
           </div>
         </h2>
