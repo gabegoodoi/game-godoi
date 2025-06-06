@@ -102,31 +102,32 @@ Path aliases are set up in [`vite.config.ts`](vite.config.ts) and `tsconfig.json
 
 ---
 
-## Adding Components
-
-Add new React components to [`src/Components`](src/Components).
-
----
-
-## Customization
-
-- Update site content in the respective components.
-- Add assets to [`src/assets`](src/assets).
-- Modify theme and color variables in [`src/App.css`](src/App.css).
-
----
-
 ## Deployment
 
-Build the project and deploy the contents of the `dist/` directory to your preferred static hosting provider.
+The site is built with Vite and deployed using [Cloudflare Pages](https://pages.cloudflare.com/).  
+The domain is managed and hosted through [Namecheap](https://www.namecheap.com/).
+
+- The production site is available at [https://gamegodoi.com](https://gamegodoi.com).
 
 ---
 
-## License
+## Contact Form
 
-Specify your license here.
+The contact form on the site uses [EmailJS](https://www.emailjs.com/) to send messages directly from the frontend, without a backend server.
+
+- EmailJS is initialized with environment variables for the public key, service ID, and template ID.
+- When a user submits the form, their message is sent via EmailJS to your configured email address.
+- Notifications are shown for success or error, and are cleared on route change.
+
+**Environment variables required:**
+- `VITE_EMAILJS_PUBLIC_KEY`
+- `VITE_EMAILJS_SERVICE_ID`
+- `VITE_EMAILJS_TEMPLATE_ID`
+
+Set these in your `.env` file for local development and in Cloudflare Pages project settings for production.
 
 ---
+
 
 ## Credits
 
