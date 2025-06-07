@@ -1,8 +1,23 @@
 # Game Godoi – Board Game Design Portfolio
 
+[🌐 Live Demo](https://gamegodoi.com)
+
+---
+
+## Features
+
+- 🎨 **Custom Themes:** Instantly switch between Light Mode, Dark Mode, and a unique Party Mode for a dynamic, playful experience.
+- 📱 **Fully Responsive:** Designed to look and work great on any device, from mobile to desktop.
+- 🖱️ **Interactive UI:** Handcrafted animated bullets, audio triggers, and custom cursor effects for an engaging user experience.
+- 📬 **Contact Form:** Secure, backend-free messaging via EmailJS.
+- 🚀 **Modern Stack:** Built with React 19, TypeScript, Vite, and Tailwind CSS.
+- ☁️ **Cloudflare Deployment:** Fast, global hosting with Cloudflare Pages and domain managed via Namecheap.
+
+---
+
 ## Overview
 
-This is a React + TypeScript + Vite project for showcasing board game designs and providing resources for new designers. The site features a designer portfolio, resource hub, and contact form.
+Game Godoi is a portfolio and resource hub for board game design, built to showcase projects, share resources, and connect with other designers. The site features a designer portfolio, resource hub, and a contact form—all with a highly interactive, custom-themed UI.
 
 ---
 
@@ -82,6 +97,7 @@ ESLint is configured for React, TypeScript, and React Hooks.
 
 - Uses [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
 - Custom styles in [`src/App.css`](src/App.css).
+- Theme switching (Light, Dark, Party) is available via the navigation bar.
 
 ---
 
@@ -108,12 +124,13 @@ The site is built with Vite and deployed using [Cloudflare Pages](https://pages.
 The domain is managed and hosted through [Namecheap](https://www.namecheap.com/).
 
 - The production site is available at [https://gamegodoi.com](https://gamegodoi.com).
+- To deploy, push changes to the main branch; Cloudflare Pages will automatically build and deploy.
 
 ---
 
 ## Contact Form
 
-The contact form on the site uses [EmailJS](https://www.emailjs.com/) to send messages directly from the frontend, without a backend server.
+The contact form uses [EmailJS](https://www.emailjs.com/) to send messages directly from the frontend, with no backend server required.
 
 - EmailJS is initialized with environment variables for the public key, service ID, and template ID.
 - When a user submits the form, their message is sent via EmailJS to your configured email address.
@@ -128,8 +145,22 @@ Set these in your `.env` file for local development and in Cloudflare Pages proj
 
 ---
 
+## Usage Tips
+
+- Switch between Light, Dark, and Party modes using the theme toggle in the navigation bar.
+- Enjoy interactive feedback with animated bullets, sound effects, and a custom cursor as you explore the site.
+
+---
+
+## Author
+
+All UI animations, audio triggers, and cursor effects were personally designed and coded by Gabe Godoi.
+
+---
 
 ## Credits
 
 - Built with [React](https://react.dev/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 - Icons by [Lucide](https://lucide.dev/).
+
+---
