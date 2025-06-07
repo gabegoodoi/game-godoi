@@ -11,7 +11,7 @@ import relief from '../assets/relief.m4a';
 import { useEffect, useState } from 'react';
 
 function SiteInfo() {
-  const [showStarInfo, setShowStarInfo] = useState(false);
+  const [showStarInfo] = useState(false);
 
   const [showCursor, setShowCursor] = useState(false);
   const [showResetImage, setShowResetImage] = useState(false);
