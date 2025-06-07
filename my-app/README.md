@@ -149,6 +149,7 @@ Set these in your `.env` file for local development and in Cloudflare Pages proj
 
 - Switch between Light, Dark, and Party modes using the theme toggle in the navigation bar.
 - Enjoy interactive feedback with animated bullets, sound effects, and a custom cursor as you explore the site.
+- Click the stars or my face for some fun gags.
 
 ---
 
