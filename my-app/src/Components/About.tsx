@@ -1,20 +1,25 @@
 // About.tsx
-import RotStar from '../assets/RotStar.gif';
-import fireSound from '../assets/fireSound.m4a';
-import splash from '../assets/splash.mp3';
-import sizzle from '../assets/sizzle.mp3';
-import bucket from '../assets/bucket.gif';
+
 import profile from '../assets/profile.png';
-import ouch from '../assets/ouch.m4a';
-import ouch2 from '../assets/ouch2.m4a';
-import ouch3 from '../assets/ouch3.m4a';
-import ouch4 from '../assets/ouch4.m4a';
-import hot from '../assets/hot.m4a';
+import RotStar from '../assets/RotStar.gif';
+
 import move from '../assets/move.m4a';
 import move2 from '../assets/move2.m4a';
 import move3 from '../assets/move3.m4a';
 import move4 from '../assets/move4.m4a';
+
+import ouch from '../assets/ouch.m4a';
+import ouch2 from '../assets/ouch2.m4a';
+import ouch3 from '../assets/ouch3.m4a';
+import ouch4 from '../assets/ouch4.m4a';
+
+import fireSound from '../assets/fireSound.m4a';
+import splash from '../assets/splash.mp3';
+import sizzle from '../assets/sizzle.mp3';
+import bucket from '../assets/bucket.gif';
+import hot from '../assets/hot.m4a';
 import relief from '../assets/relief.m4a';
+
 import { useEffect, useState } from 'react';
 
 
@@ -208,6 +213,15 @@ function About() {
           <div className="flex items-center justify-start">
             <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" style={{ transform: 'scaleX(-1)' }} onClick={handleRotStarClick}/>
             <p>Check out my <a href="https://www.linkedin.com/in/gabegodoi/">LinkedIn</a> for more info.</p>
+          </div>
+        </h3>
+      </div>
+
+      <div className="text-left">
+        <h3 className="text-2xl font-bold pt-4 text-teal-400">
+          <div className="flex items-center justify-start">
+            <img src={RotStar} alt="Rotating Star" className="w-10 h-10 mr-4 rotstar" style={{ transform: 'scaleX(-1)' }} onClick={handleRotStarClick}/>
+            <p>Learn how this site was built <a href="https://www.gamegodoi.com/site-info/">here</a>.</p>
           </div>
         </h3>
       </div>

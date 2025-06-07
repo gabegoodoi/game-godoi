@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Resources from './Components/Resources';
 import Unsigned from './Components/Unsigned';
+import SiteInfo from './Components/SiteInfo';
 import gabelogoPINK from './assets/gabelogoPINK.svg';
 import Contact from './Components/Contact';
 import diceRollSound from './assets/diceRollSound.mp3';
@@ -186,6 +187,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/available" element={<Unsigned />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/site-info" element={<SiteInfo />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
