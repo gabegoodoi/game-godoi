@@ -10,6 +10,26 @@ import gabelogoPINK from './assets/gabelogoPINK.svg';
 import Contact from './Components/Contact';
 import diceRollSound from './assets/diceRollSound.mp3';
 import pageTurnSound from './assets/pageTurnSound.mp3';
+import Woods from './Components/Woods/Woods';
+import WoodsLearn from './Components/Woods/WoodsLearn';
+import WoodsPrint from './Components/Woods/WoodsPrint';
+import WoodsCards from './Components/Woods/WoodsCards';
+import WoodsChapters from './Components/Woods/WoodsChapters';
+import SetUp from './Components/Woods/SetUp';
+import SetUpQuickStart from './Components/Woods/SetUpQuickStart';
+import Chapter1Inn from './Components/Woods/Chapter1Inn';
+import Chapter2Thicket from './Components/Woods/Chapter2Thicket';
+import Chapter3Mire from './Components/Woods/Chapter3Mire';
+import Chapter4Gorge from './Components/Woods/Chapter4Gorge';
+import Chapter5Heart from './Components/Woods/Chapter5Heart';
+import Epilogue from './Components/Woods/Epilogue';
+import EpilogueSuccess from './Components/Woods/EpilogueSuccess';
+import Epilogue6 from './Components/Woods/Epilogue6';
+import Epilogue1 from './Components/Woods/Epilogue1';
+import Epilogue2 from './Components/Woods/Epilogue2';
+import Epilogue3 from './Components/Woods/Epilogue3';
+import Epilogue4 from './Components/Woods/Epilogue4';
+import Epilogue5 from './Components/Woods/Epilogue5';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -188,6 +208,27 @@ function App() {
           <Route path="/available" element={<Unsigned />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/site-info" element={<SiteInfo />} />
+          <Route path="/woods" element={<Woods />} />
+          <Route path="/woods/learn" element={<WoodsLearn />} />
+          <Route path="/woods/print" element={<WoodsPrint />} />
+          <Route path="/woods/cards" element={<WoodsCards />} />
+          <Route path="/woods/chapters" element={<WoodsChapters />} />
+          <Route path="/woods/chapters/setup" element={<SetUp />} />
+          <Route path="/woods/chapters/setup-quick" element={<SetUpQuickStart />} />
+          <Route path="/woods/chapters/chapter1-inn" element={<Chapter1Inn />} />
+          <Route path="/woods/chapters/chapter2-thicket" element={<Chapter2Thicket />} />
+          <Route path="/woods/chapters/chapter3-mire" element={<Chapter3Mire />} />
+          <Route path="/woods/chapters/chapter4-gorge" element={<Chapter4Gorge />} />
+          <Route path="/woods/chapters/chapter5-heart" element={<Chapter5Heart />} />
+          <Route path="/woods/chapters/epilogue" element={<Epilogue />} />
+          <Route path="/woods/epilogue/success" element={<EpilogueSuccess />} />
+          <Route path="/woods/epilogue/6" element={<Epilogue6 />} />
+          <Route path="/woods/epilogue/1" element={<Epilogue1 />} />
+          <Route path="/woods/epilogue/2" element={<Epilogue2 />} />
+          <Route path="/woods/epilogue/3" element={<Epilogue3 />} />
+          <Route path="/woods/epilogue/4" element={<Epilogue4 />} />
+          <Route path="/woods/epilogue/5" element={<Epilogue5 />} />
+
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
