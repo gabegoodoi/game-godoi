@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 function Chapter5Heart() {
   return (
     <div className="w-full min-h-screen text-pink-400 px-4 sm:px-6 py-6 sm:py-8" style={{ fontFamily: "'Dm Serif Display', serif" }}>
