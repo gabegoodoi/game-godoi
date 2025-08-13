@@ -151,12 +151,6 @@ function Epilogue6() {
             </div>
 
             <div className="space-y-8 pt-8 border-t border-yellow-400/20">
-              <h3 
-                className="text-xl sm:text-2xl font-bold text-yellow-400"
-                style={{ fontFamily: "'Dm Serif Display', serif" }}
-              >
-                Living on in the Wood…
-              </h3>
               
               <p 
                 style={{ fontFamily: "'League Spartan', sans-serif" }}
