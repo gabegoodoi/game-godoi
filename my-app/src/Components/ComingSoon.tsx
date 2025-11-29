@@ -113,7 +113,7 @@ export default function ComingSoon() {
             </h2>
 
             <p className="text-yellow-250 mb-4" style={{ fontFamily: "'League Spartan', sans-serif" }}>
-              If you would like to view Gabe Godoi’s portfolio, other games, and design resources immediately, use the button below to open the full site homepage. This option bypasses the "coming soon" announcement but the Woods game content may still be incomplete.
+              If you would like to view Gabe Godoi’s portfolio, other games, and design resources immediately, use the button below to open the full site homepage.
             </p>
 
             <div className="flex justify-center">
