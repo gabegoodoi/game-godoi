@@ -1,3 +1,23 @@
+import TutorialCrossroads from './Components/Woods/CardComponents/Tutorial/TutorialCrossroads';
+import ForgottenCrossroads from './Components/Woods/CardComponents/Forgotten/ForgottenCrossroads';
+import SacrificeCrossroads from './Components/Woods/CardComponents/Sacrifice/SacrificeCrossroads';
+import NymphCrossroads from './Components/Woods/CardComponents/Nymph/NymphCrossroads';
+import MysticCrossroads from './Components/Woods/CardComponents/Mystic/MysticCrossroads';
+import CultistCrossroads from './Components/Woods/CardComponents/Cultist/CultistCrossroads';
+import CroneCrossroads from './Components/Woods/CardComponents/Crone/CroneCrossroads';
+import RavenCrossroads from './Components/Woods/CardComponents/Raven/RavenCrossroads';
+import WildmanCrossroads from './Components/Woods/CardComponents/Wildman/WildmanCrossroads';
+import TreesCrossroads from './Components/Woods/CardComponents/Trees/TreesCrossroads';
+import WatersCrossroads from './Components/Woods/CardComponents/Waters/WatersCrossroads';
+import StonesCrossroads from './Components/Woods/CardComponents/Stones/StonesCrossroads';
+import WindCrossroads from './Components/Woods/CardComponents/Wind/WindCrossroads';
+import MoonCrossroads from './Components/Woods/CardComponents/Moon/MoonCrossroads';
+import MoonInn from './Components/Woods/CardComponents/Moon/MoonInn';
+import MoonThicket from './Components/Woods/CardComponents/Moon/MoonThicket';
+import MoonMire from './Components/Woods/CardComponents/Moon/MoonMire';
+import MoonGorge from './Components/Woods/CardComponents/Moon/MoonGorge';
+import MoonHeart from './Components/Woods/CardComponents/Moon/MoonHeart';
+import AssassinInn from './Components/Woods/CardComponents/Assassin/AssassinInn';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -8,6 +28,7 @@ import Unsigned from './Components/Unsigned';
 import SiteInfo from './Components/SiteInfo';
 import gabelogoPINK from './assets/gabelogoPINK.svg';
 import Contact from './Components/Contact';
+import ComingSoon from './Components/ComingSoon';
 import diceRollSound from './assets/diceRollSound.mp3';
 import pageTurnSound from './assets/pageTurnSound.mp3';
 import Woods from './Components/Woods/Woods';
@@ -30,6 +51,33 @@ import Epilogue2 from './Components/Woods/Epilogue2';
 import Epilogue3 from './Components/Woods/Epilogue3';
 import Epilogue4 from './Components/Woods/Epilogue4';
 import Epilogue5 from './Components/Woods/Epilogue5';
+import BardCrossroads from './Components/Woods/CardComponents/Bard/BardCrossroads';
+import FoolCrossroads from './Components/Woods/CardComponents/Fool/FoolCrossroads';
+import TripletsCrossroads from './Components/Woods/CardComponents/Triplets/TripletsCrossroads';
+import LoversCrossroads from './Components/Woods/CardComponents/Lovers/LoversCrossroads';
+import BarkeepCrossroads from './Components/Woods/CardComponents/Barkeep/BarkeepCrossroads';
+import SwindlerCrossroads from './Components/Woods/CardComponents/Swindler/SwindlerCrossroads';
+import ConvictCrossroads from './Components/Woods/CardComponents/Convict/ConvictCrossroads';
+import HangedManCrossroads from './Components/Woods/CardComponents/HangedMan/HangedManCrossroads';
+import StarvedCrossroads from './Components/Woods/CardComponents/Starved/StarvedCrossroads';
+import InfectedCrossroads from './Components/Woods/CardComponents/Infected/InfectedCrossroads';
+import DrownedCrossroads from './Components/Woods/CardComponents/Drowned/DrownedCrossroads';
+import ThiefCrossroads from './Components/Woods/CardComponents/Thief/ThiefCrossroads';
+import TorturerCrossroads from './Components/Woods/CardComponents/Torturer/TorturerCrossroads';
+import AssassinCrossroads from './Components/Woods/CardComponents/Assassin/AssassinCrossroads';
+import HelplessCrossroads from './Components/Woods/CardComponents/Helpless/HelplessCrossroads';
+import WetNurseCrossroads from './Components/Woods/CardComponents/WetNurse/WetNurseCrossroads';
+import BrideCrossroads from './Components/Woods/CardComponents/Bride/BrideCrossroads';
+import GroomCrossroads from './Components/Woods/CardComponents/Groom/GroomCrossroads';
+import DevotedCrossroads from './Components/Woods/CardComponents/Devoted/DevotedCrossroads';
+import PeddlerCrossroads from './Components/Woods/CardComponents/Peddler/PeddlerCrossroads';
+import ScholarCrossroads from './Components/Woods/CardComponents/Scholar/ScholarCrossroads';
+import BlacksmithCrossroads from './Components/Woods/CardComponents/Blacksmith/BlacksmithCrossroads';
+import StrongmanCrossroads from './Components/Woods/CardComponents/Strongman/StrongmanCrossroads';
+import CourierCrossroads from './Components/Woods/CardComponents/Courier/CourierCrossroads';
+import WardenCrossroads from './Components/Woods/CardComponents/Warden/WardenCrossroads';
+import ButcherCrossroads from './Components/Woods/CardComponents/Butcher/ButcherCrossroads';
+import SovereignCrossroads from './Components/Woods/CardComponents/Sovereign/SovereignCrossroads';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,7 +139,7 @@ function App() {
         } z-50`}
       >
         <div className="px-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center">
+          <Link to="/home" className="flex items-center">
             <img
               src={gabelogoPINK}
               className={`w-10 h-10 sm:w-8 sm:h-8 ${rotate ? 'rotate-animation' : ''}`}
@@ -202,7 +250,8 @@ function App() {
 
       <div className="pt-20 w-full flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ComingSoon />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/available" element={<Unsigned />} />
@@ -228,8 +277,56 @@ function App() {
           <Route path="/woods/epilogue/3" element={<Epilogue3 />} />
           <Route path="/woods/epilogue/4" element={<Epilogue4 />} />
           <Route path="/woods/epilogue/5" element={<Epilogue5 />} />
+          <Route path="/woods/bard/crossroads" element={<BardCrossroads />} />
+          <Route path="/woods/fool/crossroads" element={<FoolCrossroads />} />
+          <Route path="/woods/triplets/crossroads" element={<TripletsCrossroads />} />
+          <Route path="/woods/lovers/crossroads" element={<LoversCrossroads />} />
+          <Route path="/woods/barkeep/crossroads" element={<BarkeepCrossroads />} />
+          <Route path="/woods/swindler/crossroads" element={<SwindlerCrossroads />} />
+          <Route path="/woods/convict/crossroads" element={<ConvictCrossroads />} />
+          <Route path="/woods/hanged-man/crossroads" element={<HangedManCrossroads />} />
+          <Route path="/woods/starved/crossroads" element={<StarvedCrossroads />} />
+          <Route path="/woods/infected/crossroads" element={<InfectedCrossroads />} />
+          <Route path="/woods/drowned/crossroads" element={<DrownedCrossroads />} />
+          <Route path="/woods/thief/crossroads" element={<ThiefCrossroads />} />
+          <Route path="/woods/torturer/crossroads" element={<TorturerCrossroads />} />
+          <Route path="/woods/assassin/crossroads" element={<AssassinCrossroads />} />
+          <Route path="/woods/helpless/crossroads" element={<HelplessCrossroads />} />
+          <Route path="/woods/wet-nurse/crossroads" element={<WetNurseCrossroads />} />
+          <Route path="/woods/bride/crossroads" element={<BrideCrossroads />} />
+          <Route path="/woods/groom/crossroads" element={<GroomCrossroads />} />
+          <Route path="/woods/devoted/crossroads" element={<DevotedCrossroads />} />
+          <Route path="/woods/peddler/crossroads" element={<PeddlerCrossroads />} />
+          <Route path="/woods/scholar/crossroads" element={<ScholarCrossroads />} />
+          <Route path="/woods/blacksmith/crossroads" element={<BlacksmithCrossroads />} />
+          <Route path="/woods/strongman/crossroads" element={<StrongmanCrossroads />} />
+          <Route path="/woods/courier/crossroads" element={<CourierCrossroads />} />
+          <Route path="/woods/warden/crossroads" element={<WardenCrossroads />} />
+          <Route path="/woods/butcher/crossroads" element={<ButcherCrossroads />} />
+          <Route path="/woods/sovereign/crossroads" element={<SovereignCrossroads />} />
+          <Route path="/woods/forgotten/crossroads" element={<ForgottenCrossroads />} />
+          <Route path="/woods/sacrifice/crossroads" element={<SacrificeCrossroads />} />
+          <Route path="/woods/nymph/crossroads" element={<NymphCrossroads />} />
+          <Route path="/woods/mystic/crossroads" element={<MysticCrossroads />} />
+          <Route path="/woods/cultist/crossroads" element={<CultistCrossroads />} />
+          <Route path="/woods/crone/crossroads" element={<CroneCrossroads />} />
+          <Route path="/woods/raven/crossroads" element={<RavenCrossroads />} />
+          <Route path="/woods/wildman/crossroads" element={<WildmanCrossroads />} />
+          <Route path="/woods/trees/crossroads" element={<TreesCrossroads />} />
+          <Route path="/woods/waters/crossroads" element={<WatersCrossroads />} />
+          <Route path="/woods/stones/crossroads" element={<StonesCrossroads />} />
+          <Route path="/woods/wind/crossroads" element={<WindCrossroads />} />
+          <Route path="/woods/moon/crossroads" element={<MoonCrossroads />} />
+          <Route path="/moon/inn" element={<MoonInn />} />
+          <Route path="/moon/thicket" element={<MoonThicket />} />
+          <Route path="/moon/mire" element={<MoonMire />} />
+          <Route path="/moon/gorge" element={<MoonGorge />} />
+          <Route path="/moon/heart" element={<MoonHeart />} />
+          <Route path="/assassin/inn" element={<AssassinInn />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/woods/tutorial/crossroads" element={<TutorialCrossroads />} />
 
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<ComingSoon />} />
         </Routes>
       </div>
     </div>

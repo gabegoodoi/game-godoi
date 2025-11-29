@@ -18,6 +18,9 @@ function Home() {
             <br></br>
             <br></br>
             Second, to showcase a <Link to="/available">selection</Link> of my available designs. 
+            <br />
+            <br />
+            If you'd like to be notified when new games (including the Woods) are available, you can <Link to="/coming-soon" className="text-yellow-400 underline">sign up for updates</Link>.
           </p>
         </div>
       <Resources />
