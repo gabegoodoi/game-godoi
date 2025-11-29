@@ -20,7 +20,7 @@
 // import AssassinInn from './Components/Woods/CardComponents/Assassin/AssassinInn';
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Resources from './Components/Resources';
@@ -117,6 +117,13 @@ function App() {
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(e.target.value as 'light' | 'dark' | 'party');
   };
+
+  // Scroll to top on route change so navigation always lands at the page top
+  const location = useLocation();
+  useEffect(() => {
+    // use instant behavior to ensure we hit the very top (no partial offsets)
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location.pathname]);
 
   return (
     <div
