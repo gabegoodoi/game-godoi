@@ -59,7 +59,7 @@ export default function ComingSoon() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen text-pink-400 px-6 py-12" style={{ fontFamily: "'Dm Serif Display', serif" }}>
+    <div className="coming-soon w-full min-h-screen text-pink-400 px-6 py-12" style={{ fontFamily: "'Dm Serif Display', serif" }}>
       <div className="max-w-3xl mx-auto bg-black/20 rounded-lg p-8 border-2 border-yellow-400">
         <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4">WE'RE PROBABLY GONNA DIE IN THESE WOODS <p></p>...<p className="mb-3"></p>is coming soon</h1>
 
@@ -80,7 +80,7 @@ export default function ComingSoon() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-black/10 border border-yellow-400 text-yellow-50 placeholder-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="cs-sans w-full px-4 py-3 rounded-lg bg-black/10 border border-yellow-400 text-yellow-50 placeholder-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 placeholder="you@example.com"
                 aria-label="Email address for game notifications"
               />
@@ -91,14 +91,14 @@ export default function ComingSoon() {
             <div className="flex items-center space-x-3">
               <button
                 type="submit"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition-colors"
+                className="cs-primary-btn cs-btn cs-sans bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition-colors"
               >
                 Notify me
               </button>
 
               <button
                 type="button"
-                className="text-yellow-300 underline"
+                className="cs-clear-btn cs-btn cs-sans text-yellow-300 underline"
                 onClick={() => { setEmail(''); setError(null); }}
               >
                 Clear
@@ -121,7 +121,7 @@ export default function ComingSoon() {
                 to="/home"
                 role="button"
                 aria-label="Go to full site homepage"
-                className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-5 py-2 rounded-lg shadow transition-colors"
+                className="cs-link-btn cs-btn cs-sans inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-5 py-2 rounded-lg shadow transition-colors"
               >
                 View Gabe's Site (Home)
               </Link>

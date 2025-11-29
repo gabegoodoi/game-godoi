@@ -513,3 +513,50 @@ body.light .text-pink-400{
 body.light .bg-black {
   background: #ffffff;
 }
+
+/* ComingSoon component scoped button colors to ensure good contrast in each theme */
+.coming-soon .cs-btn {
+  font-weight: 700;
+}
+
+/* Primary / CTA button sits on yellow background — always use dark text for best contrast */
+body.light .coming-soon .cs-primary-btn,
+body.dark .coming-soon .cs-primary-btn,
+body.party .coming-soon .cs-primary-btn {
+  color: #000; /* black text on yellow */
+}
+
+/* Clear/reset button is text-only — pick readable color per theme */
+body.light .coming-soon .cs-clear-btn {
+  color: #6e2614; /* darker brown on light background (matches site accents) */
+}
+body.dark .coming-soon .cs-clear-btn,
+body.party .coming-soon .cs-clear-btn {
+  color: #ffffff; /* white on dark/party backgrounds */
+}
+
+/* Aside link button (yellow background) — keep dark text for contrast across themes */
+body.light .coming-soon .cs-link-btn,
+body.dark .coming-soon .cs-link-btn,
+body.party .coming-soon .cs-link-btn {
+  color: #000;
+}
+
+/* Party-mode: use the site's teal look for ComingSoon CTA and link buttons instead of yellow */
+body.party .coming-soon .cs-primary-btn,
+body.party .coming-soon .cs-link-btn {
+  background: oklch(77.7% 0.152 181.912);
+  color: #000; /* dark text for contrast on the light teal */
+}
+
+/* Slightly darker teal on hover for affordance */
+body.party .coming-soon .cs-primary-btn:hover,
+body.party .coming-soon .cs-link-btn:hover {
+  background: oklch(68% 0.152 181.912);
+}
+
+/* Scoped sans-serif for ComingSoon small UI elements (inputs, buttons, sample copy) */
+.coming-soon .cs-sans {
+  font-family: 'League Spartan', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-style: normal;
+}
