@@ -257,7 +257,7 @@ function App() {
           <Route path="/available" element={<Unsigned />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/site-info" element={<SiteInfo />} />
-          <Route path="/woods" element={<Woods />} />
+          {/* <Route path="/woods" element={<Woods />} />
           <Route path="/woods/learn" element={<WoodsLearn />} />
           <Route path="/woods/print" element={<WoodsPrint />} />
           <Route path="/woods/cards" element={<WoodsCards />} />
@@ -322,9 +322,9 @@ function App() {
           <Route path="/moon/mire" element={<MoonMire />} />
           <Route path="/moon/gorge" element={<MoonGorge />} />
           <Route path="/moon/heart" element={<MoonHeart />} />
-          <Route path="/assassin/inn" element={<AssassinInn />} />
+          <Route path="/assassin/inn" element={<AssassinInn />} /> */}
           <Route path="/coming-soon" element={<ComingSoon />} />
-          <Route path="/woods/tutorial/crossroads" element={<TutorialCrossroads />} />
+          {/* <Route path="/woods/tutorial/crossroads" element={<TutorialCrossroads />} /> */}
 
           <Route path="*" element={<ComingSoon />} />
         </Routes>
